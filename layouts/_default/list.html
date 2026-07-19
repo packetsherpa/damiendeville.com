@@ -20,13 +20,43 @@
 
   {{ $pages := .RegularPages }}
   {{ if eq .Section "music" }}{{ $pages = .RegularPagesRecursive }}{{ end }}
+  {{ $isDailyArchive := and (eq .Section "music") (eq .File.Path "music/daily/_index.md") }}
   {{ if $pages }}
-    <div class="entry-list">
-      {{ range (.Paginate $pages.ByDate.Reverse).Pages }}
-        {{ partial "entry.html" . }}
-      {{ end }}
-    </div>
-    {{ partial "pagination.html" . }}
+    {{ if $isDailyArchive }}
+      <div class="archive-stack">
+        {{ range $pages.ByDate.Reverse.GroupByDate "2006" }}
+          {{ $year := .Key }}
+          <section class="archive-year" aria-labelledby="archive-year-{{ .Key }}">
+            <div class="archive-heading">
+              <p class="eyebrow">Year</p>
+              <h2 id="archive-year-{{ .Key }}">{{ .Key }}</h2>
+            </div>
+            <div class="archive-month-stack">
+              {{ range .Pages.GroupByDate "January" }}
+                <section class="archive-month" aria-labelledby="archive-month-{{ $year }}-{{ .Key | urlize }}">
+                  <div class="archive-month-heading">
+                    <p class="eyebrow">Month</p>
+                    <h3 id="archive-month-{{ $year }}-{{ .Key | urlize }}">{{ .Key }}</h3>
+                  </div>
+                  <div class="entry-list">
+                    {{ range .Pages }}
+                      {{ partial "entry.html" . }}
+                    {{ end }}
+                  </div>
+                </section>
+              {{ end }}
+            </div>
+          </section>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="entry-list">
+        {{ range (.Paginate $pages.ByDate.Reverse).Pages }}
+          {{ partial "entry.html" . }}
+        {{ end }}
+      </div>
+      {{ partial "pagination.html" . }}
+    {{ end }}
   {{ else }}
     <div class="empty-state">
       <p>Nothing has been published here yet.</p>

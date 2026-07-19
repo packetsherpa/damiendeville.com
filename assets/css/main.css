@@ -159,6 +159,32 @@ img { display: block; max-width: 100%; height: auto; }
 .article-deck { margin: 1.5rem 0 0; color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.35rem); }
 .page-intro { max-width: 40rem; color: var(--muted); }
 
+.archive-stack { display: grid; gap: clamp(3rem, 7vw, 5rem); }
+.archive-year { display: grid; gap: 1.5rem; }
+.archive-heading,
+.archive-month-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.archive-heading { padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+.archive-heading .eyebrow,
+.archive-month-heading .eyebrow { margin-bottom: 0; }
+.archive-heading h2,
+.archive-month-heading h3 {
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+.archive-heading h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1; }
+.archive-month-stack { display: grid; gap: 2.5rem; }
+.archive-month { display: grid; gap: 1rem; }
+.archive-month-heading h3 {
+  color: var(--accent-strong);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.05;
+}
+
 .article { max-width: var(--measure); margin-inline: auto; }
 .article-header { margin-bottom: 3rem; }
 .article-meta { display: flex; gap: 0.7rem 1.2rem; margin-top: 1.5rem; color: var(--muted); font-size: 0.82rem; }
@@ -228,6 +254,8 @@ img { display: block; max-width: 100%; height: auto; }
   .entry-meta { grid-row: auto; display: flex; justify-content: space-between; }
   .entry-meta span,
   .entry-meta time { display: inline; }
+  .archive-heading,
+  .archive-month-heading { align-items: flex-start; flex-direction: column; }
   .path-grid,
   .music-stream-grid,
   .term-grid { grid-template-columns: 1fr; }

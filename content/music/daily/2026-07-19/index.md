@@ -1,5 +1,5 @@
 ---
-title: Daily Playlist — July 18, 2026
+title: Daily Playlist — July 19, 2026
 date: 2026-07-19
 draft: false
 description: ""

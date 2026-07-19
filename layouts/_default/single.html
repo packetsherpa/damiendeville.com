@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <article class="article">
+    {{ $isWriting := in (slice "articles" "notes") .Section }}
+    <header class="{{ if $isWriting }}article-header{{ else }}page-header{{ end }}">
+      {{ if $isWriting }}<p class="eyebrow">{{ .Section | singularize | title }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="{{ if $isWriting }}article-deck{{ else }}page-description{{ end }}">{{ . }}</p>{{ end }}
+      {{ if $isWriting }}
+        <div class="article-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          {{ if .ReadingTime }}<span>{{ .ReadingTime }} min read</span>{{ end }}
+        </div>
+      {{ end }}
+    </header>
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{ with .GetTerms "categories" }}
+      <footer class="article-footer">
+        <span>Filed under</span>
+        {{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+      </footer>
+    {{ end }}
+
+    {{ with .GetTerms "tags" }}
+      <div class="tag-row" aria-label="Tags">
+        {{ range . }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
+      </div>
+    {{ end }}
+  </article>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <header class="page-header">
+    <p class="eyebrow">Topic</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <div class="entry-list">
+    {{ range .Paginator.Pages }}
+      {{ partial "entry.html" . }}
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+{{ end }}

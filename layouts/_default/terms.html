@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <header class="page-header">
+    <p class="eyebrow">Browse</p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-description">Explore writing by subject.</p>
+  </header>
+
+  {{ if .Data.Terms }}
+    <div class="term-grid">
+      {{ range .Data.Terms.Alphabetical }}
+        <a href="{{ .Page.RelPermalink }}">
+          <span>{{ .Page.LinkTitle }}</span>
+          <small>{{ .Count }} {{ if eq .Count 1 }}entry{{ else }}entries{{ end }}</small>
+        </a>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="empty-state"><p>Topics will appear as writing is published.</p></div>
+  {{ end }}
+{{ end }}

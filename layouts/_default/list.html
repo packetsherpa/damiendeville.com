@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <header class="page-header">
+    <p class="eyebrow">{{ if eq .Section "notes" }}Notebook{{ else }}Collection{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ if .RegularPages }}
+    <div class="entry-list">
+      {{ range .Paginator.Pages }}
+        {{ partial "entry.html" . }}
+      {{ end }}
+    </div>
+    {{ partial "pagination.html" . }}
+  {{ else }}
+    <div class="empty-state">
+      <p>Nothing has been published here yet.</p>
+    </div>
+  {{ end }}
+{{ end }}

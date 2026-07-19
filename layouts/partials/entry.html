@@ -1,0 +1,12 @@
+<article class="entry">
+  <div class="entry-meta">
+    <span>{{ .Section | singularize | title }}</span>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </div>
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ with .Description }}
+    <p>{{ . }}</p>
+  {{ else }}
+    <p>{{ .Summary | plainify | truncate 180 }}</p>
+  {{ end }}
+</article>

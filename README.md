@@ -2,6 +2,8 @@
 
 The source for Damien DeVille's technology-focused publication, built with Hugo and deployed to GitHub Pages.
 
+See [PUBLISHING.md](PUBLISHING.md) for the complete manual writing, preview, and publishing workflow.
+
 ## Local development
 
 ```sh
@@ -24,6 +26,12 @@ Chronological note:
 hugo new content notes/my-note.md --kind note
 ```
 
+Daily playlist:
+
+```sh
+hugo new content music/daily/2026-07-18/index.md --kind daily-playlist
+```
+
 New content is a draft until `draft: false` is set in its front matter.
 
 ## Production build
@@ -33,7 +41,3 @@ hugo --gc --minify
 ```
 
 The generated `public/` directory is intentionally ignored. GitHub Actions builds and deploys it on every push to `main`.
-
-## Earlier writing
-
-The preserved *Walking in Sober Boots* archive remains at <https://packetsherpa.github.io/soberboots/>.

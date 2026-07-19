@@ -9,7 +9,6 @@ summaryLength = 36
   author = "Damien DeVille"
   tagline = "Security, AI, Networks, and Technical Leadership"
   description = "Independent writing on security, artificial intelligence, networking, and technical leadership."
-  archiveURL = "https://packetsherpa.github.io/soberboots/"
 
 [permalinks]
   articles = "/articles/:slug/"
@@ -51,11 +50,16 @@ summaryLength = 36
   weight = 20
 
 [[menus.main]]
+  name = "Music"
+  pageRef = "/music"
+  weight = 30
+
+[[menus.main]]
   name = "Topics"
   pageRef = "/categories"
-  weight = 30
+  weight = 40
 
 [[menus.main]]
   name = "About"
   pageRef = "/about"
-  weight = 40
+  weight = 50

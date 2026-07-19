@@ -1,14 +1,28 @@
 {{ define "main" }}
   <header class="page-header">
-    <p class="eyebrow">{{ if eq .Section "notes" }}Notebook{{ else }}Collection{{ end }}</p>
+    <p class="eyebrow">{{ if eq .Section "notes" }}Notebook{{ else if eq .Section "music" }}Listening &amp; Live{{ else }}Collection{{ end }}</p>
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
     {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
   </header>
 
-  {{ if .RegularPages }}
+  {{ if and (eq .Section "music") .Sections }}
+    <div class="music-stream-grid" aria-label="Music sections">
+      {{ range .Sections.ByWeight }}
+        <a class="path-card" href="{{ .RelPermalink }}">
+          <span class="path-number">{{ printf "%02d" .Weight }}</span>
+          <h2>{{ .LinkTitle }}</h2>
+          <p>{{ .Description }}</p>
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ $pages := .RegularPages }}
+  {{ if eq .Section "music" }}{{ $pages = .RegularPagesRecursive }}{{ end }}
+  {{ if $pages }}
     <div class="entry-list">
-      {{ range .Paginator.Pages }}
+      {{ range (.Paginate $pages.ByDate.Reverse).Pages }}
         {{ partial "entry.html" . }}
       {{ end }}
     </div>

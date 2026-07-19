@@ -1,17 +1,28 @@
 {{ define "main" }}
   <article class="article">
-    {{ $isWriting := in (slice "articles" "notes") .Section }}
+    {{ $isWriting := in (slice "articles" "notes" "music") .Section }}
     <header class="{{ if $isWriting }}article-header{{ else }}page-header{{ end }}">
-      {{ if $isWriting }}<p class="eyebrow">{{ .Section | singularize | title }}</p>{{ end }}
+      {{ if $isWriting }}<p class="eyebrow">{{ with .Params.music_kind }}{{ . }}{{ else }}{{ .Section | singularize | title }}{{ end }}</p>{{ end }}
       <h1>{{ .Title }}</h1>
       {{ with .Description }}<p class="{{ if $isWriting }}article-deck{{ else }}page-description{{ end }}">{{ . }}</p>{{ end }}
       {{ if $isWriting }}
         <div class="article-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          {{ with .Params.artist }}<span>{{ . }}</span>{{ end }}
+          {{ with .Params.venue }}<span>{{ . }}</span>{{ end }}
+          {{ with .Params.city }}<span>{{ . }}</span>{{ end }}
           {{ if .ReadingTime }}<span>{{ .ReadingTime }} min read</span>{{ end }}
         </div>
       {{ end }}
     </header>
+
+    {{ if or .Params.playlist_url .Params.threads_url .Params.setlist_url }}
+      <div class="resource-links" aria-label="Related links">
+        {{ with .Params.playlist_url }}<a href="{{ . }}">Open playlist <span aria-hidden="true">↗</span></a>{{ end }}
+        {{ with .Params.threads_url }}<a href="{{ . }}">View on Threads <span aria-hidden="true">↗</span></a>{{ end }}
+        {{ with .Params.setlist_url }}<a href="{{ . }}">View setlist <span aria-hidden="true">↗</span></a>{{ end }}
+      </div>
+    {{ end }}
 
     <div class="prose">
       {{ .Content }}

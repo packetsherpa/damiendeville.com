@@ -5,7 +5,7 @@
       <p>Security, AI, Networks, and Technical Leadership.</p>
     </div>
     <div class="footer-links">
-      <a href="{{ "/index.xml" | relURL }}">RSS</a>
+      {{ with site.Home.OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
       <a href="{{ site.Params.archiveURL }}">Sober Boots archive</a>
       <span>© {{ now.Year }}</span>
     </div>

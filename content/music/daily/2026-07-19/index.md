@@ -1,6 +1,6 @@
 ---
 title: "Daily Playlist — July 18, 2026"
-date: "2026-07-18"
+date: "2026-07-19"
 draft: false
 description: ""
 music_kind: "Daily playlist"

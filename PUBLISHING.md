@@ -1,6 +1,12 @@
 # Publishing guide
 
-This site is a collection of Markdown files built by Hugo and published by GitHub Pages. Obsidian is the primary writing interface, GitHub is the source of truth, and GitHub performs the Hugo production build automatically.
+This site is a collection of Markdown files built by Hugo and published by GitHub Pages. Pages CMS is the primary interface for daily playlists, Obsidian remains available for longer writing, GitHub is the source of truth, and GitHub performs the Hugo production build automatically.
+
+## Daily playlists
+
+Use Pages CMS for routine playlist creation and editing. Sign in at <https://app.pagescms.org/> with GitHub, open this repository, and select **Daily Playlists**. The form manages filenames, metadata, tracks, and image paths and commits changes directly to GitHub.
+
+The export-assisted workflow is documented in [PLAYLIST_AUTOMATION.md](PLAYLIST_AUTOMATION.md).
 
 ## One-time Obsidian setup
 
@@ -33,15 +39,11 @@ Close or leave Obsidian, open the linked repository in Working Copy, and pull. R
 
 ## 2. Create an entry
 
-Create the file at the path shown below, open the command palette, choose **Templates: Insert template**, and select the matching template. Every template starts as a draft.
+For longer writing, create the file at the path shown below, open the command palette, choose **Templates: Insert template**, and select the matching template. Every template starts as a draft.
 
 ### Daily playlist
 
-```text
-content/music/daily/2026-07-18/index.md
-```
-
-Insert **Daily Playlist**. Replace the folder date, add the playlist and Threads URLs, then replace the prompts in the body.
+Pages CMS is the recommended interface. The Obsidian template remains available as an emergency fallback, but daily entries are stored as single files such as `content/music/daily/2026-07-18.md`.
 
 ### Listening note
 

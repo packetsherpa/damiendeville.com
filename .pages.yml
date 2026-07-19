@@ -1,0 +1,116 @@
+media:
+  - name: daily_playlist_images
+    label: Daily playlist images
+    input: static/images/music/daily
+    output: /images/music/daily
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "Publish daily playlist: {filename}"
+      update: "Update daily playlist: {filename}"
+      delete: "Remove daily playlist: {filename}"
+      rename: "Rename daily playlist: {oldFilename} to {newFilename}"
+
+content:
+  - name: daily_playlists
+    label: Daily Playlists
+    type: collection
+    path: content/music/daily
+    format: yaml-frontmatter
+    filename:
+      template: "{date}.md"
+      field: false
+    exclude: ["_index.md"]
+    subfolders: false
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      search: [title, description, tags, tracks.title, tracks.artist]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Playlist date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: publishDate
+        label: Publish date
+        type: date
+        required: true
+        description: Use today's date when preparing tomorrow's playlist.
+        options:
+          format: yyyy-MM-dd
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: description
+        label: Description
+        type: text
+        required: true
+        description: One sentence for lists, feeds, and social previews.
+      - name: music_kind
+        type: string
+        default: Daily playlist
+        hidden: true
+      - name: playlist_url
+        label: Playlist URL
+        type: string
+        description: Optional link to the playlist on a music service.
+      - name: threads_url
+        label: Threads URL
+        type: string
+        description: Optional link to the related Threads post.
+      - name: image
+        label: Image
+        type: image
+        options:
+          media: daily_playlist_images
+          rename: safe
+      - name: image_alt
+        label: Image description
+        type: string
+        description: Describe the image for readers using assistive technology.
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: tracks
+        label: Tracks
+        type: object
+        required: true
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{title} — {artist}"
+        fields:
+          - name: title
+            label: Track
+            type: string
+            required: true
+          - name: artist
+            label: Artist
+            type: string
+            required: true
+      - name: body
+        label: Commentary
+        type: rich-text
+        options:
+          format: markdown
+          media: daily_playlist_images
+          rename: safe

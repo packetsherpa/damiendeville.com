@@ -24,6 +24,26 @@
       </div>
     {{ end }}
 
+    {{ with .Params.image }}
+      <figure class="article-image">
+        <img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default "" }}">
+      </figure>
+    {{ end }}
+
+    {{ with .Params.tracks }}
+      <section class="track-section" aria-labelledby="track-list-heading">
+        <h2 id="track-list-heading">Track list</h2>
+        <div class="track-table-wrap">
+          <table class="track-table">
+            <thead><tr><th scope="col">Track</th><th scope="col">Artist</th></tr></thead>
+            <tbody>
+              {{ range . }}<tr><td>{{ .title }}</td><td>{{ .artist }}</td></tr>{{ end }}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {{ end }}
+
     <div class="prose">
       {{ .Content }}
     </div>

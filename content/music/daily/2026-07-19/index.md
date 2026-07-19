@@ -1,17 +1,18 @@
 ---
-title: "Daily Playlist — July 18, 2026"
-date: "2026-07-19"
+title: Daily Playlist — July 18, 2026
+date: 2026-07-19
 draft: false
 description: ""
-music_kind: "Daily playlist"
+music_kind: Daily playlist
 playlist_url: ""
 threads_url: ""
-tags: []
+tags:
+  - playlist
 ---
 
 
 <!--more-->
-Thishttps://www.threads.com/@troublelightfilms/post/Da6QRO-mI1N?xmt=AQG0LJOy-0TKDXgtAtgT6oM39tkCDN_DOxj962rCuOiGRPVReXTmyqEjqBhdedra75o8vgo&slof=1 all started from this [post on threads ](https://www.threads.com/@troublelightfilms/post/Da6QRO-mI1N?xmt=AQG0LJOy-0TKDXgtAtgT6oM39tkCDN_DOxj962rCuOiGRPVReXTmyqEjqBhdedra75o8vgo&slof=1)
+This list started after listening to Fugazi as a result of this [post on threads ](https://www.threads.com/@troublelightfilms/post/Da6QRO-mI1N?xmt=AQG0LJOy-0TKDXgtAtgT6oM39tkCDN_DOxj962rCuOiGRPVReXTmyqEjqBhdedra75o8vgo&slof=1)
 
 ![Threads Post](IMG_2445.jpeg)
 ## Track list

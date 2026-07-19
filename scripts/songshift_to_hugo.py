@@ -14,6 +14,8 @@ from zoneinfo import ZoneInfo
 class SongShiftFormatError(ValueError):
     """Raised when an export cannot be parsed without guessing."""
 
+DEFAULT_APPLE_MUSIC_STOREFRONT = "us"
+
 
 @dataclass(frozen=True)
 class Track:
@@ -113,6 +115,18 @@ def _yaml_string(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
+def derive_playlist_url(
+    playlist: PlaylistExport,
+    *,
+    storefront: str = DEFAULT_APPLE_MUSIC_STOREFRONT,
+) -> str:
+    service = playlist.service.casefold()
+    playlist_id = playlist.playlist_id.strip()
+    if service != "apple music" or not playlist_id.startswith("pl."):
+        return ""
+    return f"https://music.apple.com/{storefront}/playlist/{playlist_id}"
+
+
 def render_hugo(
     playlist: PlaylistExport,
     *,
@@ -128,6 +142,7 @@ def render_hugo(
     )
     summary = description or f"A daily playlist for {display_date}."
     exported_at = playlist.exported_at.isoformat()
+    resolved_playlist_url = playlist_url or derive_playlist_url(playlist)
 
     lines = [
         "---",
@@ -137,7 +152,7 @@ def render_hugo(
         "draft: true",
         f"description: {_yaml_string(summary)}",
         'music_kind: "Daily playlist"',
-        f"playlist_url: {_yaml_string(playlist_url)}",
+        f"playlist_url: {_yaml_string(resolved_playlist_url)}",
         f"threads_url: {_yaml_string(threads_url)}",
         f"image: {_yaml_string(image)}",
         f"image_alt: {_yaml_string(image_alt)}",

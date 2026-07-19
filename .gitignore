@@ -3,3 +3,6 @@
 /.hugo_build.lock
 .DS_Store
 /.obsidian/
+__pycache__/
+*.pyc
+/.playlist-sync-state.json

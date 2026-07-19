@@ -1,7 +1,12 @@
 import unittest
 from pathlib import Path
 
-from scripts.songshift_to_hugo import SongShiftFormatError, parse_songshift, render_hugo
+from scripts.songshift_to_hugo import (
+    SongShiftFormatError,
+    derive_playlist_url,
+    parse_songshift,
+    render_hugo,
+)
 
 
 FIXTURE = Path(__file__).parent / "fixtures" / "songshift-2026.07.19.txt"
@@ -28,8 +33,17 @@ class SongShiftImporterTests(unittest.TestCase):
         self.assertIn('title: "Daily Playlist — July 19, 2026"', rendered)
         self.assertIn('publishDate: "2026-07-18"', rendered)
         self.assertIn("draft: true", rendered)
+        self.assertIn('playlist_url: "https://music.apple.com/us/playlist/pl.u-25V2ytKByDW"', rendered)
         self.assertIn('album: "Red Medicine"', rendered)
         self.assertLess(rendered.index('title: "Version"'), rendered.index('title: "Kool Thing"'))
+
+    def test_derives_apple_music_playlist_url_from_playlist_id(self):
+        playlist = parse_songshift(FIXTURE.read_text(encoding="utf-8"))
+
+        self.assertEqual(
+            derive_playlist_url(playlist),
+            "https://music.apple.com/us/playlist/pl.u-25V2ytKByDW",
+        )
 
     def test_rejects_ambiguous_track_rows(self):
         malformed = "\n".join(

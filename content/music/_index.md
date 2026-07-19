@@ -1,5 +1,5 @@
 ---
-title: "Music"
+title: "Musical Musings"
 description: "Daily playlists, listening notes, and records from live shows."
 ---
 

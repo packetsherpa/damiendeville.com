@@ -15,16 +15,10 @@ The local site is available at `http://localhost:1313/`.
 
 ## Create content
 
-Evergreen article:
+Technology note:
 
 ```sh
-hugo new content articles/my-article.md --kind article
-```
-
-Chronological note:
-
-```sh
-hugo new content notes/my-note.md --kind note
+hugo new content technology/my-note.md --kind technology
 ```
 
 Daily playlist fallback:

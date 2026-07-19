@@ -7,4 +7,4 @@ categories: []
 tags: []
 ---
 
-Capture the observation, experiment, or source while it is fresh.
+Capture the idea, observation, experiment, or lesson while it is fresh.

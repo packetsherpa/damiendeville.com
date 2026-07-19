@@ -11,8 +11,7 @@ summaryLength = 36
   description = "Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
 
 [permalinks]
-  articles = "/articles/:slug/"
-  notes = "/notes/:year/:month/:slug/"
+  technology = "/technology/:slug/"
 
 [taxonomies]
   category = "categories"
@@ -40,26 +39,21 @@ summaryLength = 36
     dir = ":cacheDir/images"
 
 [[menus.main]]
-  name = "Articles"
-  pageRef = "/articles"
+  name = "Technology Notes"
+  pageRef = "/technology"
   weight = 10
 
 [[menus.main]]
-  name = "Notes"
-  pageRef = "/notes"
-  weight = 20
-
-[[menus.main]]
-  name = "Music"
+  name = "Musical Musings"
   pageRef = "/music"
-  weight = 30
+  weight = 20
 
 [[menus.main]]
   name = "Topics"
   pageRef = "/categories"
-  weight = 40
+  weight = 30
 
 [[menus.main]]
   name = "About"
   pageRef = "/about"
-  weight = 50
+  weight = 40

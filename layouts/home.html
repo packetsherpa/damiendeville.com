@@ -2,7 +2,7 @@
   <section class="hero">
     <p class="eyebrow">Independent writing by Damien DeVille</p>
     <h1>Clear thinking about complex systems.</h1>
-    <p class="hero-summary">Essays and field notes on security, artificial intelligence, technical leadership, music, and the ideas that connect them.</p>
+    <p class="hero-summary">Technology notes on security, artificial intelligence, and leadership, alongside musical musings and the ideas that connect them.</p>
     <div class="topic-row" aria-label="Primary topics">
       <span>Security</span>
       <span>Artificial Intelligence</span>
@@ -15,12 +15,12 @@
     <div class="section-heading">
       <div>
         <p class="eyebrow">From the notebook</p>
-        <h2 id="latest-heading">Latest writing</h2>
+        <h2 id="latest-heading">Latest technology notes</h2>
       </div>
-      <a class="text-link" href="{{ "articles/" | relURL }}">All articles <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="{{ "technology/" | relURL }}">All technology notes <span aria-hidden="true">→</span></a>
     </div>
 
-    {{ $writing := where site.RegularPages "Section" "in" (slice "articles" "notes") }}
+    {{ $writing := where site.RegularPages "Section" "technology" }}
     {{ if $writing }}
       <div class="entry-list">
         {{ range first 6 $writing.ByDate.Reverse }}
@@ -29,21 +29,21 @@
       </div>
     {{ else }}
       <div class="empty-state">
-        <p>The framework is ready. The first article is still being written.</p>
+        <p>The framework is ready. The first technology note is still being written.</p>
       </div>
     {{ end }}
   </section>
 
   <section class="path-grid" aria-label="Explore the site">
-    <a class="path-card" href="{{ "articles/" | relURL }}">
+    <a class="path-card" href="{{ "technology/" | relURL }}">
       <span class="path-number">01</span>
-      <h2>Articles</h2>
-      <p>Evergreen analysis of systems, security, AI, and leadership.</p>
+      <h2>Technology Notes</h2>
+      <p>Writing on security, artificial intelligence, complex systems, and leadership.</p>
     </a>
-    <a class="path-card" href="{{ "notes/" | relURL }}">
+    <a class="path-card" href="{{ "music/" | relURL }}">
       <span class="path-number">02</span>
-      <h2>Notes</h2>
-      <p>Shorter records from the lab, the field, and the reading queue.</p>
+      <h2>Musical Musings</h2>
+      <p>Daily playlists, listening notes, and records from live shows.</p>
     </a>
   </section>
 {{ end }}

@@ -67,21 +67,13 @@ Put photographs in the same folder as `index.md`. Reference them with ordinary M
 ![The artist performing at the venue](stage.jpg)
 ```
 
-### Technology article
+### Technology note
 
 ```text
-content/articles/article-title.md
+content/technology/note-title.md
 ```
 
-Insert **Technology Article**.
-
-### Short technical note
-
-```text
-content/notes/note-title.md
-```
-
-Insert **Technical Note**.
+Insert **Technology Note**. Use the same template for short observations and longer, more developed pieces; the writing no longer needs to be classified before you begin.
 
 Use lowercase, hyphenated folder and file names. The human-readable title comes from the `title` field inside the note.
 

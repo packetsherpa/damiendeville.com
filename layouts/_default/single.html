@@ -1,8 +1,8 @@
 {{ define "main" }}
   <article class="article">
-    {{ $isWriting := in (slice "articles" "notes" "music") .Section }}
+    {{ $isWriting := in (slice "technology" "music") .Section }}
     <header class="{{ if $isWriting }}article-header{{ else }}page-header{{ end }}">
-      {{ if $isWriting }}<p class="eyebrow">{{ with .Params.music_kind }}{{ . }}{{ else }}{{ .Section | singularize | title }}{{ end }}</p>{{ end }}
+      {{ if $isWriting }}<p class="eyebrow">{{ with .Params.music_kind }}{{ . }}{{ else }}{{ if eq $.Section "technology" }}Technology note{{ else }}{{ $.Section | singularize | title }}{{ end }}{{ end }}</p>{{ end }}
       <h1>{{ .Title }}</h1>
       {{ with .Description }}<p class="{{ if $isWriting }}article-deck{{ else }}page-description{{ end }}">{{ . }}</p>{{ end }}
       {{ if $isWriting }}

@@ -6,3 +6,12 @@
 __pycache__/
 *.pyc
 /.playlist-sync-state.json
+.claude/*
+!.claude/memory/
+!.claude/settings.json
+.claude/settings.local.json
+CLAUDE.local.md
+.env
+.env.*
+*.key
+*.pem

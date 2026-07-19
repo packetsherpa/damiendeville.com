@@ -1,0 +1,7 @@
+# Changes here will be overwritten by `copier update`. Managed by tool-template.
+_commit: local-retrofit
+project_name: damiendeville.com
+project_description: Hugo source for Damien DeVille's publication on technology, leadership, and music, including the daily playlist workflow.
+include_project_context: true
+include_agent_coordination: true
+is_python: false

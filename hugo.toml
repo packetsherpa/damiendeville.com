@@ -7,8 +7,8 @@ summaryLength = 36
 
 [params]
   author = "Damien DeVille"
-  tagline = "Security, AI, Networks, and Technical Leadership"
-  description = "Independent writing on security, artificial intelligence, networking, and technical leadership."
+  tagline = "Technology, leadership & music"
+  description = "Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
 
 [permalinks]
   articles = "/articles/:slug/"

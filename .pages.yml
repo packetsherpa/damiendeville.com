@@ -107,6 +107,9 @@ content:
             label: Artist
             type: string
             required: true
+          - name: album
+            label: Album
+            type: string
       - name: body
         label: Commentary
         type: rich-text

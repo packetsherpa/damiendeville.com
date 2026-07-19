@@ -38,12 +38,29 @@ tags: []
 tracks:
   - title: Track title
     artist: Artist name
+    album: Album title
 ```
 
 Commentary remains ordinary Markdown below the front matter.
 
 ## Parser phase
 
-Do not build an export parser until at least one representative raw export has been inspected. The parser should preserve track order, normalize artist and title fields without changing their meaning, detect duplicates, and report ambiguous rows rather than guessing.
+The SongShift text export uses one seven-field playlist header followed by five-field track rows:
 
-Once the export format is known, the parser can become a small repository script invoked by Codex. Pages CMS remains the recovery and manual-editing interface.
+```text
+***playlist*** | SongShift | export timestamp | playlist date | status | service | playlist ID
+track | artist | album | service | track ID
+```
+
+The repository importer preserves track order and album data, detects duplicate service identifiers, and reports malformed rows rather than guessing.
+
+Generate a reviewable draft with:
+
+```sh
+python3 scripts/songshift_to_hugo.py path/to/export.txt \
+  --output content/music/daily/YYYY-MM-DD.md
+```
+
+Optional flags add the description, playlist URL, Threads URL, image path, and image description. The importer always creates a draft so commentary can be reviewed before publication.
+
+Pages CMS remains the recovery and manual-editing interface.

@@ -26,7 +26,23 @@ Capture the strongest first impression from the show.
 Japanese Breakfast opened, and Michelle Zauner absolutely rocked it — a strong,
 high-energy set that set the tone for the night.
 
-## Setlist
+## Japanese Breakfast setlist
+
+*Intro: Planetary Ambience*
+
+1. Paprika
+2. Honey Water
+3. Road Head
+4. Picture Window
+5. Boyish *(Little Big League cover)*
+6. The Body Is a Blade
+7. Mega Circuit
+8. Kokomo, IN
+9. Slide Tackle
+10. Be Sweet
+11. Diving Woman
+
+## Death Cab for Cutie setlist
 
 1. Riptides
 2. Roman Candles

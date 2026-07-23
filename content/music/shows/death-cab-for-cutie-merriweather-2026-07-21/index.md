@@ -35,7 +35,7 @@ night pulled those months right back to the surface. Seeing Death Cab sent me
 straight to the Postal Service on the drive home, and it rained like hell the
 whole way — I was flooded with memories of my first few months with Mrs. TKD.
 
-Between the day we met and July 15th, it rained 39 out of 95 days, and it was
+Between the day we met and July 15th, it rained 49 out of 95 days, and it was
 colder than normal. I still carry the specific pictures: picking her up on rainy
 nights, both of us in wool sweaters and jeans. So here is my deep thought,
 arrived at under that downpour — music and rain dominated our first 95 days

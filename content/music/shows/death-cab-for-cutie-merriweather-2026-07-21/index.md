@@ -26,6 +26,12 @@ Capture the strongest first impression from the show.
 Japanese Breakfast opened, and Michelle Zauner absolutely rocked it — a strong,
 high-energy set that set the tone for the night.
 
+A highlight of the show was Ben Gibbard alone at center stage for "I Will Follow
+You Into the Dark" — just him and an acoustic guitar. An incredible song about
+love and death, and the whole pavilion went quiet for it.
+
+![Ben Gibbard alone at center stage with an acoustic guitar, lit by a single spotlight, during his solo performance of "I Will Follow You Into the Dark"](ben-gibbard-solo.jpg)
+
 ## Japanese Breakfast setlist
 
 *Intro: Planetary Ambience*

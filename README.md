@@ -1,6 +1,6 @@
 # damiendeville.com
 
-The source for Damien DeVille's publication on technology, leadership, and music, built with Hugo and deployed to GitHub Pages.
+The source for Damien DeVille's publication on technology, life, and music, built with Hugo and deployed to GitHub Pages.
 
 See [PUBLISHING.md](PUBLISHING.md) for the complete manual writing, preview, and publishing workflow.
 See [PLAYLIST_AUTOMATION.md](PLAYLIST_AUTOMATION.md) for the daily playlist intake and automation design.

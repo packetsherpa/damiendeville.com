@@ -1,6 +1,6 @@
 ---
 title: "Death Cab for Cutie at Merriweather Post Pavilion"
-date: 2026-07-21
+date: 2026-07-22
 draft: true
 description: "Death Cab for Cutie's I Built You a Tower tour lands at Merriweather, with Japanese Breakfast opening."
 music_kind: "Live show"
@@ -36,23 +36,23 @@ Capture the strongest first impression from the show.
 9. Pep Talk
 10. Codes and Keys
 11. I Will Possess Your Heart
-12. I Will Follow You Into the Dark
+12. I Will Follow You Into the Dark *(Ben solo, acoustic guitar)*
 13. Stone Over Water
 14. How Heavenly a State
-15. Crooked Teeth
-16. Trap Door
-17. You Are a Tourist
-18. The Sound of Settling
-19. Soul Meets Body
+15. Cath...
+16. Crooked Teeth
+17. Trap Door
+18. You Are a Tourist
+19. The Sound of Settling
+20. Soul Meets Body
 
 ### Encore
 
-20. Title Track
-21. Here to Forever
-22. Marching Bands of Manhattan
+21. Title Track
+22. Here to Forever
+23. Marching Bands of Manhattan
+24. Transatlanticism
 
 ## Setlist notes
-
-<!-- Setlist per setlist.fm; confirm order and any covers/segues against your own memory before publishing. -->
 
 <!-- Put photographs in this page's folder and use: ![Descriptive alt text](photo.jpg) -->

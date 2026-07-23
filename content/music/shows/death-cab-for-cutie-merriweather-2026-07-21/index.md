@@ -1,6 +1,6 @@
 ---
 title: "Death Cab for Cutie at Merriweather Post Pavilion"
-date: 2026-07-22
+date: 2026-07-21
 draft: true
 description: "Death Cab for Cutie's I Built You a Tower tour lands at Merriweather, with Japanese Breakfast opening."
 music_kind: "Live show"
@@ -22,6 +22,9 @@ Capture the strongest first impression from the show.
 ## The performance
 
 ## Highlights
+
+Japanese Breakfast opened, and Michelle Zauner absolutely rocked it — a strong,
+high-energy set that set the tone for the night.
 
 ## Setlist
 

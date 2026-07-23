@@ -15,7 +15,11 @@ tags:
   - death cab for cutie
 ---
 
-Capture the strongest first impression from the show.
+My strongest first impression was how incredibly tight the band was — and how
+much more complex these songs are than the recordings let on. Many have band
+members playing multiple instruments, switching off between guitar and keys, and
+a lot of them carry three distinct guitar parts. It takes a great band to
+replicate that live, and they did.
 
 <!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Death Cab for Cutie at Merriweather Post Pavilion"
 date: 2026-07-21
-draft: true
+draft: false
 description: "Death Cab for Cutie's I Built You a Tower tour lands at Merriweather, with Japanese Breakfast opening."
 music_kind: "Live show"
 artist: "Death Cab for Cutie"

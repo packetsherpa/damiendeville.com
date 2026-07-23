@@ -7,7 +7,7 @@ summaryLength = 36
 
 [params]
   author = "Damien DeVille"
-  tagline = "Technology, leadership & music"
+  tagline = "Notes on Technology, Life, & Music"
   description = "Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
 
 [permalinks]

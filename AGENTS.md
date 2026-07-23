@@ -1,6 +1,6 @@
 # damiendeville.com — Agent Instructions
 
-Hugo source for Damien DeVille's publication on technology, leadership, and music, including the daily playlist intake and publishing workflow.
+Hugo source for Damien DeVille's publication on technology, life, and music, including the daily playlist intake and publishing workflow.
 
 This file is the single source of truth for any agent working in this repo
 (Claude Code, Codex, or others). `CLAUDE.md` is a symlink to this file. Global

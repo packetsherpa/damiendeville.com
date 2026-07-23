@@ -21,6 +21,22 @@ Capture the strongest first impression from the show.
 
 ## The performance
 
+The sky opened up. Rain poured through most of the set, and I was grateful to be
+under the pavilion — though the wind kept driving it in sideways and we still got
+wet. A crazy storm.
+
+Something about the music and the weather together made me nostalgic for the
+early days with my wife. That spring was extraordinarily wet, and the rain that
+night pulled those months right back to the surface. Seeing Death Cab sent me
+straight to the Postal Service on the drive home, and it rained like hell the
+whole way — I was flooded with memories of my first few months with Mrs. TKD.
+
+Between the day we met and July 15th, it rained 39 out of 95 days, and it was
+colder than normal. I still carry the specific pictures: picking her up on rainy
+nights, both of us in wool sweaters and jeans. So here is my deep thought,
+arrived at under that downpour — music and rain dominated our first 95 days
+together.
+
 ## Highlights
 
 Japanese Breakfast opened, and Michelle Zauner absolutely rocked it — a strong,

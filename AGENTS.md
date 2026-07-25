@@ -29,6 +29,12 @@ Important workflow docs:
 - `PLAYLIST_AUTOMATION.md` for the current playlist automation flow
 - `PLAYLIST_EXPANSION_PLAN.md` for the planned Spotify / TIDAL / Threads expansion
 
+## Writing Style
+
+`STYLE.md` is the writing standard for all reader-facing site content. Read and apply it whenever creating or substantively editing technology notes, music writing, show notes, or personal posts.
+
+@STYLE.md
+
 Gotchas:
 
 - The public site is deployed from `main` through `.github/workflows/pages.yml`.

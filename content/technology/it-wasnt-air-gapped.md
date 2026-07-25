@@ -18,7 +18,7 @@ I’ve been following the recent coverage about AI models "escaping" their test 
 
 Air-gapped systems aren't governed by a policy goal or a strict firewall rule. They have no physical or routable path to another network. If an agent literally has no route, no proxy access, and no explicit out-of-band communication channel, it can’t send packets out. It might write a clever exploit or tell you what it *wants* to do, but it can't magically reach an IP address that isn't accessible through a network path.
 
-That’s basic networking, not a hot take on AI capability. When I worked for a large media company, we had networks that were physically and logically isolated from each other. They were truly air-gapped. As defense in depth—not what made them air-gapped—we also ensured that their routing tables were restricted to the RFC 1918 prefixes in use on those segments and that their routers didn't run routing protocols, so they couldn't learn routes by accident. We were paranoid because we lived through MSBlaster taking vulnerable systems on those networks down before we air-gapped them.
+That’s basic networking, not a hot take on AI capability. When I worked for a large media company, we had networks that were physically and logically isolated from each other. They were truly air-gapped. As defense in depth (not what made them air-gapped) we also ensured that their routing tables were restricted to the RFC 1918 prefixes in use on those segments and that their routers didn't run routing protocols, so they couldn't learn routes by accident. We were paranoid because we lived through MSBlaster taking vulnerable systems on those networks down before we air-gapped them.
 
 ## This is a standard architecture failure
 

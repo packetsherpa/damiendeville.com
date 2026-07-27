@@ -1,10 +1,23 @@
 # Publishing guide
 
-This site is a collection of Markdown files built by Hugo and published by GitHub Pages. Pages CMS is the primary interface for daily playlists, Obsidian remains available for longer writing, GitHub is the source of truth, and GitHub performs the Hugo production build automatically.
+This site is a collection of Markdown files built by Hugo and published by GitHub Pages. Pages CMS is the primary publishing interface for all posts, GitHub is the source of truth, and GitHub performs the Hugo production build automatically.
+
+## Publish from Pages CMS
+
+Open <https://app.pagescms.org/>, sign in with GitHub, and select this repository. Pages CMS commits directly to `main`; GitHub Actions then builds and deploys the site.
+
+Use the collection that matches the post:
+
+- **Technology Notes** for technology, security, AI, and leadership writing.
+- **Listening Notes** for albums, artists, and other focused music writing.
+- **Live Shows** for concert reports.
+- **Daily Playlists** for the daily playlist archive.
+
+New Technology Notes, Listening Notes, and Live Shows begin as drafts. Clear **Draft** only when the entry is ready for the public site.
 
 ## Daily playlists
 
-Use Pages CMS for routine playlist creation and editing. Sign in at <https://app.pagescms.org/> with GitHub, open this repository, and select **Daily Playlists**. The form manages filenames, metadata, tracks, and image paths and commits changes directly to GitHub.
+Use Pages CMS for routine playlist creation and editing. Select **Daily Playlists**. The form manages filenames, metadata, tracks, and image paths and commits changes directly to GitHub.
 
 The export-assisted workflow is documented in [PLAYLIST_AUTOMATION.md](PLAYLIST_AUTOMATION.md).
 
@@ -55,17 +68,7 @@ Insert **Listening Note**.
 
 ### Live show
 
-```text
-content/music/shows/2026-07-18-artist-venue/index.md
-```
-
-Insert **Live Show**.
-
-Put photographs in the same folder as `index.md`. Reference them with ordinary Markdown:
-
-```md
-![The artist performing at the venue](stage.jpg)
-```
+Pages CMS is recommended. Select **Live Shows**, choose **New**, and complete the form. It creates a date-and-title Markdown file under `content/music/shows/`. Upload photographs through the Header image field or the editor's image control; Pages CMS stores them under `static/images/music/` and inserts a Hugo-ready image path.
 
 ### Technology note
 
@@ -73,7 +76,7 @@ Put photographs in the same folder as `index.md`. Reference them with ordinary M
 content/technology/note-title.md
 ```
 
-Insert **Technology Note**. Use the same template for short observations and longer, more developed pieces; the writing no longer needs to be classified before you begin.
+Pages CMS is recommended. Select **Technology Notes**, choose **New**, and complete the form. Use the same form for short observations and longer, more developed pieces; the writing no longer needs to be classified before you begin.
 
 Use lowercase, hyphenated folder and file names. The human-readable title comes from the `title` field inside the note.
 

@@ -6,6 +6,7 @@ description: "A model can exploit a path it can reach. It cannot exploit a route
 cover:
   image: "feature.jpg"
   alt: "A weathered roadside sign reading ‘No Vacancy’ above ‘Caution Driveway.’"
+  relative: true
 categories:
   - Technology
 tags:

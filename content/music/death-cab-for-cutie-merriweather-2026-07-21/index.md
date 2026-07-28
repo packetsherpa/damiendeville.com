@@ -10,6 +10,7 @@ cover:
   image: "ben-gibbard-solo.jpg"
   alt: "Ben Gibbard alone at center stage with an acoustic guitar, lit by a single spotlight."
   hiddenInSingle: true
+  relative: true
 ---
 
 My strongest first impression was how incredibly tight the band was — and how

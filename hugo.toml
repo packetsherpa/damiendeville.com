@@ -17,6 +17,7 @@ theme = "PaperMod"
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   mainSections = ["technology", "music"]
+  images = ["images/og-default.jpg"]
 
   [params.cover]
     linkFullImages = true

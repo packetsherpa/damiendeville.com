@@ -30,6 +30,9 @@ hugo new content music/a-show.md
 
 New content is a draft (`draft: true`) until you set `draft: false`.
 
+See **[WRITING.md](WRITING.md)** for the full guide, including page bundles,
+front matter, gotchas, and publishing from a phone or tablet.
+
 ### Images
 
 - **Header image:** set `cover.image` in front matter. For a per-post image,

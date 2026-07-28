@@ -1,4 +1,4 @@
-# damiendeville.com — Live State
+# Steady (steady.org) — Live State
 
 > Live state only: what is in flight, blocked, and next. Durable facts live in
 > `.claude/memory/` (see `.claude/memory/MEMORY.md`). Changelog lives in git
@@ -6,9 +6,9 @@
 
 ## Goal
 
-Maintain and publish Damien DeVille's writing-first Hugo site — technology
-notes, music writing, and personal posts — with a low-friction "write markdown
-locally, push to `main`" workflow.
+Maintain and publish **Steady** (steady.org), Damien DeVille's writing-first
+Hugo site — technology notes, music writing, and personal posts — with a
+low-friction "write markdown locally, push to `main`" workflow.
 
 ## Active Work
 
@@ -17,6 +17,10 @@ locally, push to `main`" workflow.
   now comes from the PaperMod theme (git submodule under `themes/PaperMod`).
 - Surviving content: one technology note (`it-wasnt-air-gapped`), one live-show
   note (Death Cab for Cutie at Merriweather), and the about page.
+- Renaming the site to **Steady** at **steady.org**. Repo changes done
+  (`static/CNAME`, `baseURL`, site title, docs). Going live still needs DNS for
+  steady.org pointed at GitHub Pages and the custom domain set in Pages
+  settings. The old damiendeville.com is being retired (no redirect).
 
 ## Blockers
 

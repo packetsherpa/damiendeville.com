@@ -1,8 +1,8 @@
 # Writing and publishing
 
-How to write a post and put it live on https://damiendeville.com/. The site is
-[Hugo](https://gohugo.io/) + the PaperMod theme, deployed to GitHub Pages.
-Publishing is nothing more than pushing Markdown to `main`.
+How to write a post and put it live on https://steady.org/ (the site is named
+**Steady**). It is [Hugo](https://gohugo.io/) + the PaperMod theme, deployed to
+GitHub Pages. Publishing is nothing more than pushing Markdown to `main`.
 
 ## One-time setup (on a computer)
 

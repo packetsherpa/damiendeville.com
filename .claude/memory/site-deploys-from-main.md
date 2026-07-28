@@ -5,5 +5,6 @@ metadata:
   type: project
 ---
 
-The production site at `https://damiendeville.com/` is built and deployed by
-`.github/workflows/pages.yml` whenever `main` is updated.
+The production site at `https://steady.org/` is built and deployed by
+`.github/workflows/pages.yml` whenever `main` is updated. The custom domain is
+pinned by `static/CNAME`.

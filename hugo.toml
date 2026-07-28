@@ -1,6 +1,6 @@
-baseURL = "https://damiendeville.com/"
+baseURL = "https://steady.org/"
 locale = "en-US"
-title = "Damien DeVille"
+title = "Steady"
 timeZone = "America/New_York"
 enableRobotsTXT = true
 summaryLength = 36

@@ -1,6 +1,7 @@
-# damiendeville.com
+# Steady
 
-Source for Damien DeVille's writing on technology, life, and music. Built with
+Source for **Steady** — Damien DeVille's writing on technology, life, and music,
+published at [steady.org](https://steady.org/). Built with
 [Hugo](https://gohugo.io/) and the
 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to
 GitHub Pages.

@@ -1,15 +1,15 @@
-# damiendeville.com — Agent Instructions
+# Steady (steady.org) — Agent Instructions
 
-Hugo source for Damien DeVille's writing on technology, life, and music.
+Hugo source for Steady, Damien DeVille's writing on technology, life, and music.
 
 This file is the single source of truth for any agent working in this repo
 (Claude Code, Codex, or others). `CLAUDE.md` and `GEMINI.md` are symlinks to
 this file. Global conventions live in `~/.claude/CLAUDE.md` — do not restate
-them here. This file covers only what is specific to damiendeville.com.
+them here. This file covers only what is specific to Steady (steady.org).
 
 ## What This Tool Is
 
-This repository builds and deploys a Hugo site at `https://damiendeville.com/`.
+This repository builds and deploys a Hugo site at `https://steady.org/`.
 It is a writing-first personal publication. The content areas are:
 
 - `content/technology/` for technology notes

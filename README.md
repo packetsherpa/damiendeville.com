@@ -1,33 +1,47 @@
 # damiendeville.com
 
-The source for Damien DeVille's publication on technology, life, and music, built with Hugo and deployed to GitHub Pages.
+Source for Damien DeVille's writing on technology, life, and music. Built with
+[Hugo](https://gohugo.io/) and the
+[PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to
+GitHub Pages.
 
-See [PUBLISHING.md](PUBLISHING.md) for the complete manual writing, preview, and publishing workflow.
-See [PLAYLIST_AUTOMATION.md](PLAYLIST_AUTOMATION.md) for the daily playlist intake and automation design.
+## Setup
+
+The theme is a git submodule, so after cloning fetch it once:
+
+```sh
+git submodule update --init --recursive
+```
 
 ## Local development
 
 ```sh
-hugo server --buildDrafts
+hugo server -D
 ```
 
-The local site is available at `http://localhost:1313/`.
+The local site is available at `http://localhost:1313/`. `-D` includes drafts.
 
-## Create content
-
-Technology note:
+## Writing a post
 
 ```sh
-hugo new content technology/my-note.md --kind technology
+hugo new content technology/my-note.md
+hugo new content music/a-show.md
 ```
 
-Daily playlist fallback:
+New content is a draft (`draft: true`) until you set `draft: false`.
 
-```sh
-hugo new content music/daily/2026-07-18.md --kind daily-playlist
-```
+### Images
 
-New content is a draft until `draft: false` is set in its front matter.
+- **Header image:** set `cover.image` in front matter. For a per-post image,
+  make the post a page bundle (a folder with `index.md`) and drop the image in
+  it — see `content/technology/it-wasnt-air-gapped/` for a working example.
+- **In-body image:** `![Descriptive alt text](photo.jpg)` with the file in the
+  post's bundle folder.
+
+## Publishing
+
+Set `draft: false`, commit, and push to `main`. GitHub Actions builds and
+deploys the site. That is the whole flow.
 
 ## Production build
 
@@ -35,4 +49,5 @@ New content is a draft until `draft: false` is set in its front matter.
 hugo --gc --minify
 ```
 
-The generated `public/` directory is intentionally ignored. GitHub Actions builds and deploys it on every push to `main`.
+The generated `public/` directory is git-ignored; CI builds it on every push to
+`main`.

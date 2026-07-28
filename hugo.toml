@@ -4,11 +4,41 @@ title = "Damien DeVille"
 timeZone = "America/New_York"
 enableRobotsTXT = true
 summaryLength = 36
+theme = "PaperMod"
 
 [params]
+  env = "production"
   author = "Damien DeVille"
   tagline = "Notes on Technology, Life, & Music"
   description = "Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  mainSections = ["technology", "music"]
+  images = ["images/og-default.jpg"]
+
+  [params.cover]
+    linkFullImages = true
+    responsiveImages = false
+
+  [params.homeInfoParams]
+    Title = "Damien DeVille"
+    Content = "Notes on technology, life, and music. I've spent 25+ years in networking and cybersecurity — hands-on engineering, systems architecture, and technical leadership — and I write here about security, artificial intelligence, complex systems, and the records and live shows I keep coming back to."
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    title = "LinkedIn"
+    url = "https://www.linkedin.com/in/ddeville/"
+  [[params.socialIcons]]
+    name = "threads"
+    title = "Threads"
+    url = "https://www.threads.com/@coldsho.e"
+  [[params.socialIcons]]
+    name = "rss"
+    title = "RSS"
+    url = "index.xml"
 
 [permalinks]
   technology = "/technology/:slug/"
@@ -39,21 +69,16 @@ summaryLength = 36
     dir = ":cacheDir/images"
 
 [[menus.main]]
-  name = "Technology Notes"
+  name = "Technology"
   pageRef = "/technology"
   weight = 10
 
 [[menus.main]]
-  name = "Musical Musings"
+  name = "Music"
   pageRef = "/music"
   weight = 20
 
 [[menus.main]]
-  name = "Topics"
-  pageRef = "/categories"
-  weight = 30
-
-[[menus.main]]
   name = "About"
   pageRef = "/about"
-  weight = 40
+  weight = 30

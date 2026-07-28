@@ -9,7 +9,7 @@ Today I work for the largest cyber security company in the world. My career has 
 
 This site is where I follow ideas beyond the boundaries of a particular project or employer. My technology notes cover security, artificial intelligence, complex systems, and leadership—grounded in experience, but curious about what comes next. They are a practical record of what I’m learning and what seems worth keeping.
 
-Music is the other thread running through the site. I publish daily playlists, notes on albums and artists, and a record of the shows I attend.
+Music is the other thread running through the site. I write about the records I keep returning to and the live shows I attend.
 
 For a more complete professional history, [find me on LinkedIn](https://www.linkedin.com/in/ddeville/).
 

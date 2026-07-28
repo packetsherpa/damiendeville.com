@@ -6,24 +6,24 @@
 
 ## Goal
 
-Maintain and publish Damien DeVille's Hugo site, with an emphasis on the daily playlist workflow and the next-stage expansion into multi-service playlists and Threads posting.
+Maintain and publish Damien DeVille's writing-first Hugo site — technology
+notes, music writing, and personal posts — with a low-friction "write markdown
+locally, push to `main`" workflow.
 
 ## Active Work
 
-- Daily playlist automation for Apple Music-backed SongShift exports is now in the repo.
-- July 1-19, 2026 playlist pages have been generated, with July 11 intentionally absent.
-- A concrete expansion design exists for Spotify, TIDAL, and Threads in `PLAYLIST_EXPANSION_PLAN.md`.
-- The repo is being retrofitted to match the `tool-template` agent-config and memory standard.
+- The site was rebuilt writing-first: the daily-playlist archive, the SongShift
+  automation, the browser CMS, and the bespoke layouts were removed. Rendering
+  now comes from the PaperMod theme (git submodule under `themes/PaperMod`).
+- Surviving content: one technology note (`it-wasnt-air-gapped`), one live-show
+  note (Death Cab for Cutie at Merriweather), and the about page.
 
 ## Blockers
 
-- The Spotify / TIDAL / Threads expansion is designed but not implemented yet.
-- TIDAL playlist-write capability still needs verification before implementation.
+- None.
 
 ## Next
 
-- Decide whether playlist automation should be triggered by a macOS folder watcher or a Codex cron job.
-- When ready, implement the expansion plan in phases:
-  1. Spotify playlist creation and URL persistence
-  2. Threads posting after deploy
-  3. TIDAL integration after API capability is confirmed
+- Write posts. New technology notes and music/show notes are the main work.
+- Optional polish: a favicon and site OpenGraph image, and a short bio block on
+  the home page if desired (PaperMod `homeInfoParams`).

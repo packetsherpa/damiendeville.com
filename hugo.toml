@@ -22,6 +22,23 @@ theme = "PaperMod"
     linkFullImages = true
     responsiveImages = false
 
+  [params.homeInfoParams]
+    Title = "Damien DeVille"
+    Content = "Notes on technology, life, and music. I've spent 25+ years in networking and cybersecurity — hands-on engineering, systems architecture, and technical leadership — and I write here about security, artificial intelligence, complex systems, and the records and live shows I keep coming back to."
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    title = "LinkedIn"
+    url = "https://www.linkedin.com/in/ddeville/"
+  [[params.socialIcons]]
+    name = "threads"
+    title = "Threads"
+    url = "https://www.threads.com/@coldsho.e"
+  [[params.socialIcons]]
+    name = "rss"
+    title = "RSS"
+    url = "index.xml"
+
 [permalinks]
   technology = "/technology/:slug/"
 

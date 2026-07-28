@@ -4,11 +4,23 @@ title = "Damien DeVille"
 timeZone = "America/New_York"
 enableRobotsTXT = true
 summaryLength = 36
+theme = "PaperMod"
 
 [params]
+  env = "production"
   author = "Damien DeVille"
   tagline = "Notes on Technology, Life, & Music"
   description = "Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  mainSections = ["technology", "music"]
+
+  [params.cover]
+    linkFullImages = true
+    responsiveImages = false
 
 [permalinks]
   technology = "/technology/:slug/"
@@ -39,21 +51,16 @@ summaryLength = 36
     dir = ":cacheDir/images"
 
 [[menus.main]]
-  name = "Technology Notes"
+  name = "Technology"
   pageRef = "/technology"
   weight = 10
 
 [[menus.main]]
-  name = "Musical Musings"
+  name = "Music"
   pageRef = "/music"
   weight = 20
 
 [[menus.main]]
-  name = "Topics"
-  pageRef = "/categories"
-  weight = 30
-
-[[menus.main]]
   name = "About"
   pageRef = "/about"
-  weight = 40
+  weight = 30

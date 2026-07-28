@@ -3,13 +3,12 @@ title: "{{ replace .File.ContentBaseName `-` ` ` | title }}"
 date: {{ .Date }}
 draft: true
 description: ""
-music_kind: "Live show"
-artist: ""
-supporting_acts: []
-venue: ""
-city: ""
-setlist_url: ""
 tags: []
+# For a header image, make this a page bundle (folder with index.md), drop the
+# image in it, and uncomment:
+# cover:
+#   image: "feature.jpg"
+#   alt: ""
 ---
 
 Capture the strongest first impression from the show.
@@ -20,6 +19,6 @@ Capture the strongest first impression from the show.
 
 ## Highlights
 
-## Setlist notes
+## Setlist
 
 <!-- Put photographs in this page's folder and use: ![Descriptive alt text](photo.jpg) -->

@@ -1,6 +1,6 @@
 ---
-title: "Musical Musings"
-description: "Daily playlists, listening notes, and records from live shows."
+title: "Music"
+description: "Listening notes and records from live shows."
 ---
 
-Music I listen to, playlists I share, and notes from shows I attend.
+Notes on the records I keep returning to and the live shows I attend.

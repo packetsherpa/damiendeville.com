@@ -7,8 +7,8 @@ GitHub Pages. Publishing is nothing more than pushing Markdown to `main`.
 ## One-time setup (on a computer)
 
 ```sh
-git clone https://github.com/packetsherpa/damiendeville.com.git
-cd damiendeville.com
+git clone https://github.com/packetsherpa/steady.org.git
+cd steady.org
 git submodule update --init --recursive   # pulls the PaperMod theme
 ```
 

@@ -1,6 +1,6 @@
 # Memory
 
-Durable facts, decisions, and landmines for damiendeville.com. One file per
+Durable facts, decisions, and landmines for Steady (steady.org). One file per
 fact. Live/churning state lives in `project-context.md`, not here.
 
 - [Site deploys from main via GitHub Pages](site-deploys-from-main.md) — production deploys come from pushes to `main` through the Pages workflow.

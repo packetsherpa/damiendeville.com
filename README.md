@@ -1,6 +1,7 @@
-# damiendeville.com
+# Steady
 
-Source for Damien DeVille's writing on technology, life, and music. Built with
+Source for **Steady** — Damien DeVille's writing on technology, life, and music,
+published at [steady.org](https://steady.org/). Built with
 [Hugo](https://gohugo.io/) and the
 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to
 GitHub Pages.
@@ -29,6 +30,9 @@ hugo new content music/a-show.md
 ```
 
 New content is a draft (`draft: true`) until you set `draft: false`.
+
+See **[WRITING.md](WRITING.md)** for the full guide, including page bundles,
+front matter, gotchas, and publishing from a phone or tablet.
 
 ### Images
 

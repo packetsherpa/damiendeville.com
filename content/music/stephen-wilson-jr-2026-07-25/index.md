@@ -6,8 +6,8 @@ description: ""
 tags: [show, concert, live mudic]
 # For a header image, make this a page bundle (folder with index.md), drop the
 # image in it, and uncomment:
-cover: "swj.jpg"
-image: "swj.jpg"
+cover: "swj.JPG"
+image: "swj.JPG"
 alt: "Stephen Willson Jr. at Pier Six"
 ---
 

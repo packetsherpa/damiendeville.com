@@ -19,11 +19,16 @@ Install Hugo (`brew install hugo` on macOS). No Node, no Python — just Hugo.
 1. **Create the post.**
 
    ```sh
-   hugo new content technology/my-note.md   # a technology note
-   hugo new content music/a-show.md         # a music / show note
+   hugo new content technology/my-note.md               # technology note
+   hugo new content --kind show music/a-show.md         # live-show note
+   hugo new content --kind listening music/an-album.md  # listening note
    ```
 
-   This scaffolds the file from the matching archetype with `draft: true`.
+   Each scaffolds the file with `draft: true`. The `technology` section matches
+   its archetype (`archetypes/technology.md`) by name automatically. The `music`
+   section holds two kinds — `show` and `listening` — and there is no default
+   `music` archetype, so pass `--kind` to pick one; without it Hugo falls back
+   to the generic `archetypes/default.md` skeleton.
 
 2. **Write it.** Edit the front matter and body in Markdown. While
    `draft: true`, it is invisible to the world.

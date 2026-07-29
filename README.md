@@ -25,9 +25,14 @@ The local site is available at `http://localhost:1313/`. `-D` includes drafts.
 ## Writing a post
 
 ```sh
-hugo new content technology/my-note.md
-hugo new content music/a-show.md
+hugo new content technology/my-note.md               # technology note
+hugo new content --kind show music/a-show.md         # live-show note
+hugo new content --kind listening music/an-album.md  # listening note
 ```
+
+The `music` section has two archetypes (`show` and `listening`), so pass
+`--kind` to choose one; without it you get the generic default skeleton.
+`technology` matches its archetype by section name automatically.
 
 New content is a draft (`draft: true`) until you set `draft: false`.
 

@@ -1,5 +1,5 @@
 ---
-title: "Strphen Wilson Jr. with the Lone Bellow"
+title: "Stephen Wilson Jr. with the Lone Bellow"
 date: 2026-07-28T21:50:05-04:00
 draft: false
 description: ""

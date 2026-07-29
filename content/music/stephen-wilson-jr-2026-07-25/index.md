@@ -12,7 +12,7 @@ cover:
   relative: true
 ---
 
-Last Saturday I went to see Steven Wilson Jr. play at Pier Six Concert Pavilion in Baltimore, Maryland. I actually went to see the opening act, The Lone Dello, but was pleasantly surprised by how much I enjoyed Steven. I hadn't ever listened to Steven before Saturday afternoon when I made the decision to buy the ticket but it turned out I really dug his music, as a certain mix of country and grunge, and he is quite the showman. 
+Last Saturday I went to see Steven Wilson Jr. play at Pier Six Concert Pavilion in Baltimore, Maryland. I actually went to see the opening act, The Lone Bellow, but was pleasantly surprised by how much I enjoyed Stephen. I hadn't ever listened to Stephen before Saturday afternoon when I made the decision to buy the ticket but it turned out I really dug his music, as a certain mix of country and grunge, and he is quite the showman. 
 
 <!--more-->
 

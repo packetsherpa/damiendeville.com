@@ -1,7 +1,7 @@
 ---
 title: "Strphen Wilson Jr. with the zlobe Bellow"
 date: 2026-07-28T21:50:05-04:00
-draft: fslse
+draft: false
 description: ""
 tags: [show, concert, live mudic]
 # For a header image, make this a page bundle (folder with index.md), drop the

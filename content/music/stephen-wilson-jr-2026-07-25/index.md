@@ -9,7 +9,7 @@ tags: [show, concert, live mudic]
 cover: 
   image: "swj.JPG"
   alt: "Stephen Willson Jr. at Pier Six"
-	relative: true
+  relative: true
 ---
 
 Last Saturday I went to see Steven Wilson Jr. play at Pier Six Concert Pavilion in Baltimore, Maryland. I actually went to see the opening act, The Lone Dello, but was pleasantly surprised by how much I enjoyed Steven. I hadn't ever listened to Steven before Saturday afternoon when I made the decision to buy the ticket but it turned out I really dug his music, as a certain mix of country and grunge, and he is quite the showman. 

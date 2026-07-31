@@ -61,13 +61,11 @@ Instead of asking, *"How do we stop AI?"* they ask a different question:
 
 ## Why blocking fails
 
-When security discovers an unsanctioned AI application, the instinct is often to treat it like any other unauthorized software. It's often how we deal with threats even when they arent fully understood. We block them in the deny list, and close the ticket. But with these mundane examples nothing about the underlying business need has changed.
+If employees need help with code, documents, spreadsheets, vendor research, or presentations, they’ll continue looking for tools that solve those problems. If the sanctioned path is harder than the unsanctioned one, they’ll simply choose the easier path.
 
-If employees need help with code, documents, spreadsheets, vendor research, or presentations, they'll continue looking for tools that solve those problems. If the sanctioned path is harder than the unsanctioned one, they'll simply choose the easier path.
+A developer who loses access to ChatGPT doesn’t suddenly stop wanting AI assistance. A marketer who loses Claude still needs to write content. An analyst who loses Gemini still has to summarize reports.
 
-A developer who loses access to ChatGPT doesn't suddenly stop wanting AI assistance. A marketer who loses Claude still needs to write content. An analyst who loses Gemini still has to summarize reports.
-
-The business requirement gets met and your visibility vanishes along with your ability to govern and control your data and intelectual property.
+The business requirement gets satisfied without your knowledge and your visibility vanishes along with your ability to govern and control your data and intellectual property.
 
 That's why I believe organizations should stop treating every Shadow AI discovery as evidence of employee misconduct and start treating it as customer feedback. Every new AI application employees adopt represents unmet demand.
 

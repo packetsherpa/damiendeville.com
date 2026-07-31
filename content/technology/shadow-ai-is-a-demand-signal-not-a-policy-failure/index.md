@@ -1,7 +1,7 @@
 ---
 title: "Shadow AI Is a Demand Signal, Not a Policy Failure"
 date: 2026-07-30T22:29:11-04:00
-draft: true
+draft: false
 description: "Blocking an unsanctioned AI tool doesn't remove the need behind it. It only removes your visibility into how employees are already solving it."
 categories:
   - Technology

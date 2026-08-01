@@ -53,7 +53,7 @@ That gives readers a reason to keep reading instead of diving immediately into i
 
 2. Brief recap of the Anthropic findings
 
-This section should simply establish the facts. Anthropic posted a blog post on July 30, 2026, discussing the.txt
+This section should simply establish the facts.
 
 Keep the observations separate.
 
@@ -103,7 +103,7 @@ Talk about:
 * encouraging trend
 * Anthropic appropriately cautions against over-interpreting the data
 
-This becomes its own discussion. Anthropic posted a blog post on July 30, 2026, discussing the.txt
+This becomes its own discussion.
 
 ⸻
 
@@ -136,7 +136,7 @@ The important distinction is:
 
 Neither model should have reached the internet.
 
-That’s the common denominator. Anthropic posted a blog post on July 30, 2026, discussing the.txt
+That’s the common denominator.
 
 ⸻
 

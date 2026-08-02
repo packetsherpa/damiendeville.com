@@ -37,12 +37,16 @@ jobs:
           tar -xf "${RUNNER_TEMP}/hugo.tar.gz" -C "${RUNNER_TEMP}" hugo
           echo "${RUNNER_TEMP}" >> "${GITHUB_PATH}"
 
+      # baseURL deliberately comes from hugo.toml, not from
+      # steps.pages.outputs.base_url. That output reflects the repo's current
+      # Pages settings, so while a custom domain's certificate is still
+      # provisioning it reports http:// — which bakes http:// canonical, og:url,
+      # and RSS links into the deployed HTML.
       - name: Build site
         run: >-
           hugo
           --gc
           --minify
-          --baseURL "${{ steps.pages.outputs.base_url }}/"
           --cacheDir "${{ runner.temp }}/hugo_cache"
 
       - name: Upload Pages artifact

@@ -1,4 +1,4 @@
-# Packet Sherpa (packetsherpa.org) — Live State
+# Default Deny (packetsherpa.org) — Live State
 
 > Live state only: what is in flight, blocked, and next. Durable facts live in
 > `.claude/memory/` (see `.claude/memory/MEMORY.md`). Changelog lives in git
@@ -6,7 +6,7 @@
 
 ## Goal
 
-Maintain and publish **Packet Sherpa** (packetsherpa.org), Damien DeVille's
+Maintain and publish **Default Deny** (packetsherpa.org), Damien DeVille's
 technology writing — security, artificial intelligence, complex systems, and
 technical leadership — with a low-friction "write markdown locally, push to
 `main`" workflow.
@@ -21,7 +21,7 @@ technical leadership — with a low-friction "write markdown locally, push to
   `shadow-ai-is-a-demand-signal-not-a-policy-failure`,
   `egress-filtering-is-the-control-we-never-implemented`), the about page, the
   PaperMod submodule, the Pages workflow, and the `ideas/` staging tree.
-- Posts publish at the site root (`/:slug/`) rather than `/technology/:slug/`;
+- Posts publish at the site root (`/:contentbasename/`, i.e. the bundle folder name) rather than `/technology/:slug/`;
   `/technology/` is now the Archive listing.
 - Image optimization added: `cover.responsiveImages = true` plus a new in-body
   image render hook at `layouts/_markup/render-image.html`.

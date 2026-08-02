@@ -1,7 +1,7 @@
 # Writing and publishing
 
 How to write a post and put it live on https://packetsherpa.org/ (the site is
-named **Packet Sherpa**). It is [Hugo](https://gohugo.io/) + the PaperMod theme,
+named **Default Deny**). It is [Hugo](https://gohugo.io/) + the PaperMod theme,
 deployed to GitHub Pages. Publishing is nothing more than pushing Markdown to
 `main`.
 
@@ -54,7 +54,8 @@ Install Hugo (`brew install hugo` on macOS). No Node, no Python — just Hugo.
 ## Where posts end up
 
 Posts live in `content/technology/`, but they publish at the site root.
-`hugo.toml` maps the section with `[permalinks] technology = "/:slug/"`, so:
+`hugo.toml` maps the section with `[permalinks] technology = "/:contentbasename/"`,
+so the **bundle folder name is the URL**:
 
 ```
 content/technology/my-note/index.md   →   https://packetsherpa.org/my-note/

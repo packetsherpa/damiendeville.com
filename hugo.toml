@@ -1,6 +1,6 @@
 baseURL = "https://packetsherpa.org/"
 locale = "en-US"
-title = "Packet Sherpa"
+title = "Default Deny, Thoughts from a Packetsherpa"
 timeZone = "America/New_York"
 enableRobotsTXT = true
 summaryLength = 36
@@ -40,7 +40,7 @@ theme = "PaperMod"
     url = "index.xml"
 
 [permalinks]
-  technology = "/:slug/"
+  technology = "/:contentbasename/"
 
 [taxonomies]
   category = "categories"

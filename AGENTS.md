@@ -1,11 +1,11 @@
-# Packet Sherpa (packetsherpa.org) — Agent Instructions
+# Default Deny (packetsherpa.org) — Agent Instructions
 
-Hugo source for Packet Sherpa, Damien DeVille's technology writing.
+Hugo source for Default Deny, Damien DeVille's technology writing.
 
 This file is the single source of truth for any agent working in this repo
 (Claude Code, Codex, or others). `CLAUDE.md` and `GEMINI.md` are symlinks to
 this file. Global conventions live in `~/.claude/CLAUDE.md` — do not restate
-them here. This file covers only what is specific to Packet Sherpa
+them here. This file covers only what is specific to Default Deny
 (packetsherpa.org).
 
 ## What This Tool Is
@@ -45,7 +45,8 @@ apply it whenever creating or substantively editing a technology note.
 - A post is a draft (`draft: true`) until you set `draft: false`; publishing is
   pushing a non-draft post to `main`.
 - Posts live in `content/technology/` but publish at the site root:
-  `[permalinks]` maps the section to `/:slug/`, so a post in
+  `[permalinks]` maps the section to `/:contentbasename/`, so the bundle folder
+  name is the URL and retitling a post cannot move it. A post in
   `content/technology/my-note/` is served at `https://packetsherpa.org/my-note/`.
   The section listing itself is the Archive page at `/technology/`.
 - For a post with a header image, make it a page bundle (a folder with

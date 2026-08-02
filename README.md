@@ -1,6 +1,6 @@
-# Packet Sherpa
+# Default Deny
 
-Source for **Packet Sherpa** — Damien DeVille's writing on security, artificial
+Source for **Default Deny** — Damien DeVille's writing on security, artificial
 intelligence, complex systems, and technical leadership, published at
 [packetsherpa.org](https://packetsherpa.org/). Built with
 [Hugo](https://gohugo.io/) and the

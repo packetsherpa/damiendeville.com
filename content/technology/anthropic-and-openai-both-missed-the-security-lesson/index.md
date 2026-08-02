@@ -1,8 +1,8 @@
 ---
-title: "Egress Filtering Is the Control We Never Implemented"
+title: "Anthropic and OpenAI Both Missed the Security Lesson"
 date: 2026-08-01T12:24:15-04:00
 draft: false
-description: "We've known how to authenticate and authorize outbound access since the 2000s. Autonomous agents are what turn a hardening project we kept deferring into a containment requirement."
+description: "One model used a zero-day, three used an open path. Both labs are debating that distinction when the common denominator is the one that matters: nothing in the path applied policy to outbound traffic."
 categories:
   - Technology
 tags:

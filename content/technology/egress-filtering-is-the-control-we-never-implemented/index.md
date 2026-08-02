@@ -1,7 +1,7 @@
 ---
 title: "Egress Filtering Is the Control We Never Implemented"
 date: 2026-08-01T12:24:15-04:00
-draft: true
+draft: false
 description: "We've known how to authenticate and authorize outbound access since the 2000s. Autonomous agents are what turn a hardening project we kept deferring into a containment requirement."
 categories:
   - Technology
@@ -12,10 +12,10 @@ tags:
   - networking
   - egress
 # For a header image, drop it in this folder and uncomment:
-# cover:
-#   image: "feature.jpg"
-#   alt: ""
-#   relative: true
+cover:
+  image: "keep-out.jpg"
+  alt: "Keep Out | Annapolis, MD, USA | 2025 | Damien DeVille"
+  relative: true
 ---
 
 On July 21, 2026, we learned that a model reached the open internet from an environment that was supposed to be sealed and launched a cyberattack against another company. On July 30, we learned that it happened again at a different lab. That lab's disclosure was careful to list the ways the two cases differed: it had caught the problem itself, its models had left through an open path rather than a novel exploit, and its newest model stopped once it worked out the environment was real.
@@ -24,7 +24,7 @@ I [wrote about the first incident]({{< relref "/technology/it-wasnt-air-gapped" 
 
 Every one of those distinctions is real, but the list dismisses a subtle reality. In both cases, a process could send packets destined for the real internet and no enforcement point applied policy to the traffic in a meaningful way. In Anthropic's case we know it left from inside a third party's evaluation network and carried out real attacks against companies that were never part of the test. Frankly in 2026, we know better and yet open egress access persists. Outbound internet access should be governed in the same way that we govern inbound access.
 
-That is not an AI problem. It's the access problem, and it is considerably older than any model involved. Many of my colleagues and I were arguing for outbound filtering in the late nineties. The papers written about egress filtering then were largely about spoofing, or a variant of it; the argument that a host should have to say where it was going, and be told no, took another decade to be written down. The egress controls we've deferred since then are the ones that now determine whether an agent's mistake becomes an incident or not.
+That is not an AI problem. It's the access problem, and it is considerably older than any model involved. Many of my colleagues and I were arguing for outbound filtering in the late nineties. The papers written about egress filtering then were largely about spoofing; the argument that a host should have to say where it was going, and be told no, took another decade to be written down. The egress controls we've deferred since then are the ones that now determine whether an agent's mistake becomes an incident or not.
 
 I spent a good part of my career managing firewalls, trying (and mostly failing) to make egress filtering work in a way the business would tolerate. I can tell you exactly why the business refuses to accept filtering access from inside the network to the internet: it is hard, it breaks things people need, and it addresses a risk nobody feels.
 
@@ -44,9 +44,9 @@ Internet Protocol and the networks built on it were not designed for a hostile e
 
 Default-allow egress descends directly from all of this. It's the legacy of the network's founding assumption, still running in production, and every security control we have bolted on since has been a retrofit. That is the actual problem: a reasonable assumption outlived the conditions that made it reasonable, but as defenders, we didn't adapt.
 
-In 2010, Eric Hutchins, Michael Cloppert, and Rohan Amin published Lockheed Martin's intrusion kill chain: seven phases running from reconnaissance through weaponization, delivery, exploitation, installation, command and control, and actions on objectives. On the sixth phase the paper is blunt about what an adversary requires. *"The adversary must establish a command channel to the compromised host to be able to direct the actions, also known as 'beaconing.'"* The defensive claim attached to the model is equally blunt. *"The defender needs to stop the chain at just one phase to stop the intrusion."*
+In 2010, Eric Hutchins, Michael Cloppert, and Rohan Amin published Lockheed Martin's intrusion kill chain: seven phases running from reconnaissance through weaponization, delivery, exploitation, installation, command and control, and actions on objectives. On the sixth phase the paper is blunt about what an adversary requires. _"The adversary must establish a command channel to the compromised host to be able to direct the actions, also known as 'beaconing.'"_ The defensive claim attached to the model is equally blunt. _"The defender needs to stop the chain at just one phase to stop the intrusion."_
 
-Read those two sentences next to each other. The adversary's control channel is an *outbound connection*, and interrupting a single phase is sufficient to end the intrusion. Egress control has been a documented way to break the chain for sixteen years. And yet, open access to the internet from "inside" the network persists to this day.
+Read those two sentences next to each other. The adversary's control channel is an _outbound connection_, and interrupting a single phase is sufficient to end the intrusion. Egress control has been a documented way to break the chain for sixteen years. And yet, open access to the internet from "inside" the network persists to this day.
 
 The same year (September of 2010), John Kindervag published Forrester's Zero Trust model, starting from the position that network location is not authorization. Most organizations have spent the sixteen years since applying that principle in precisely one direction (users accessing applications). Application access got rebuilt around identity, device posture, and an explicit decision per request. Users stopped being trusted because they were on the corporate LAN. Meanwhile the permit-any rule pointing outward survived the entire program intact, in most cases untouched by it. We accepted that location proves nothing about traffic accessing our apps and continued treating it as sufficient for traffic destined to the internet.
 
@@ -123,4 +123,3 @@ The design hasn't changed. Identity, an explicit decision, and something in the 
 - [John Kindervag: No More Chewy Centers: Introducing the Zero Trust Model of Information Security (Forrester Research, September 14, 2010)](https://media.paloaltonetworks.com/documents/Forrester-No-More-Chewy-Centers.pdf)
 - [OpenAI and Hugging Face partner to address security incident during model evaluation](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
 - [Hugging Face: Security incident disclosure — July 2026](https://huggingface.co/blog/security-incident-july-2026)
-

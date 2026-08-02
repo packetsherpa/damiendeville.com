@@ -1,8 +1,8 @@
 ---
-title: "Anthropic and OpenAI Both Missed the Security Lesson"
+title: "Anthropic Missed the Security Lesson"
 date: 2026-08-01T12:24:15-04:00
 draft: false
-description: "One model used a zero-day, three used an open path. Both labs are debating that distinction when the common denominator is the one that matters: nothing in the path applied policy to outbound traffic."
+description: "One lab's model used a zero-day, another lab discovered three or their models used an open path and is litigating that distinction when the common denominator is the one that matters: nothing in the path applied policy to outbound traffic."
 categories:
   - Technology
 tags:

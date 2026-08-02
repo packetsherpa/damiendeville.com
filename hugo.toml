@@ -33,7 +33,7 @@ theme = "PaperMod"
   [[params.socialIcons]]
     name = "threads"
     title = "Threads"
-    url = "https://www.threads.com/@coldsho.e"
+    url = "https://www.threads.com/@packetsherpa"
   [[params.socialIcons]]
     name = "rss"
     title = "RSS"

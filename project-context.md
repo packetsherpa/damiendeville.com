@@ -1,4 +1,4 @@
-# Steady (steady.org) — Live State
+# Packet Sherpa (packetsherpa.org) — Live State
 
 > Live state only: what is in flight, blocked, and next. Durable facts live in
 > `.claude/memory/` (see `.claude/memory/MEMORY.md`). Changelog lives in git
@@ -6,28 +6,43 @@
 
 ## Goal
 
-Maintain and publish **Steady** (steady.org), Damien DeVille's writing-first
-Hugo site — technology notes, music writing, and personal posts — with a
-low-friction "write markdown locally, push to `main`" workflow.
+Maintain and publish **Packet Sherpa** (packetsherpa.org), Damien DeVille's
+technology writing — security, artificial intelligence, complex systems, and
+technical leadership — with a low-friction "write markdown locally, push to
+`main`" workflow.
 
 ## Active Work
 
-- The site was rebuilt writing-first: the daily-playlist archive, the SongShift
-  automation, the browser CMS, and the bespoke layouts were removed. Rendering
-  now comes from the PaperMod theme (git submodule under `themes/PaperMod`).
-- Surviving content: one technology note (`it-wasnt-air-gapped`), one live-show
-  note (Death Cab for Cutie at Merriweather), and the about page.
-- Renaming the site to **Steady** at **steady.org**. Repo changes done
-  (`static/CNAME`, `baseURL`, site title, docs). Going live still needs DNS for
-  steady.org pointed at GitHub Pages and the custom domain set in Pages
-  settings. The old damiendeville.com is being retired (no redirect).
+- This repo was split out of `steady.org` on 2026-08-02, cloned with full git
+  history so the three existing technology notes keep their commits. `steady.org`
+  keeps music and personal writing; this repo takes technology. See
+  [[split-from-steady-org]].
+- Carried over: three technology notes (`it-wasnt-air-gapped`,
+  `shadow-ai-is-a-demand-signal-not-a-policy-failure`,
+  `egress-filtering-is-the-control-we-never-implemented`), the about page, the
+  PaperMod submodule, the Pages workflow, and the `ideas/` staging tree.
+- Posts publish at the site root (`/:slug/`) rather than `/technology/:slug/`;
+  `/technology/` is now the Archive listing.
+- Image optimization added: `cover.responsiveImages = true` plus a new in-body
+  image render hook at `layouts/_markup/render-image.html`.
 
 ## Blockers
 
-- None.
+- **Not live yet.** Going live needs two manual steps outside this repo:
+  1. DNS at Hover for `packetsherpa.org` — four apex `A` records to
+     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`,
+     plus `CNAME www → packetsherpa.github.io`.
+  2. GitHub repo Settings → Pages → set the custom domain to `packetsherpa.org`
+     and enable Enforce HTTPS once the certificate is issued.
+- `steady.org` still contains the technology section. It has not been cut down
+  yet — that is a separate change in that repo.
 
 ## Next
 
-- Write posts. New technology notes and music/show notes are the main work.
-- Optional polish: a favicon and site OpenGraph image, and a short bio block on
-  the home page if desired (PaperMod `homeInfoParams`).
+- Land the DNS and Pages settings above, then confirm the live site.
+- Cut `steady.org` down to music: delete `content/technology/`,
+  `archetypes/technology.md`, `ideas/technology/`, fix its `hugo.toml`, and
+  rewrite its about/home copy. No redirects — readership is negligible and
+  Damien explicitly deferred them on 2026-08-02.
+- Optional: add the same image render hook to `steady.org`.
+- Write posts.

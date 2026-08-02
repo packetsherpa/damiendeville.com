@@ -1,14 +1,17 @@
 # Writing and publishing
 
-How to write a post and put it live on https://steady.org/ (the site is named
-**Steady**). It is [Hugo](https://gohugo.io/) + the PaperMod theme, deployed to
-GitHub Pages. Publishing is nothing more than pushing Markdown to `main`.
+How to write a post and put it live on https://packetsherpa.org/ (the site is
+named **Packet Sherpa**). It is [Hugo](https://gohugo.io/) + the PaperMod theme,
+deployed to GitHub Pages. Publishing is nothing more than pushing Markdown to
+`main`.
+
+Music and personal writing go to the separate `steady.org` repo, not this one.
 
 ## One-time setup (on a computer)
 
 ```sh
-git clone https://github.com/packetsherpa/steady.org.git
-cd steady.org
+git clone https://github.com/packetsherpa/packetsherpa.org.git
+cd packetsherpa.org
 git submodule update --init --recursive   # pulls the PaperMod theme
 ```
 
@@ -19,16 +22,11 @@ Install Hugo (`brew install hugo` on macOS). No Node, no Python — just Hugo.
 1. **Create the post.**
 
    ```sh
-   hugo new content technology/my-note.md               # technology note
-   hugo new content --kind show music/a-show.md         # live-show note
-   hugo new content --kind listening music/an-album.md  # listening note
+   hugo new content technology/my-note.md
    ```
 
-   Each scaffolds the file with `draft: true`. The `technology` section matches
-   its archetype (`archetypes/technology.md`) by name automatically. The `music`
-   section holds two kinds — `show` and `listening` — and there is no default
-   `music` archetype, so pass `--kind` to pick one; without it Hugo falls back
-   to the generic `archetypes/default.md` skeleton.
+   This scaffolds the file with `draft: true`. The `technology` section matches
+   its archetype (`archetypes/technology.md`) by name automatically.
 
 2. **Write it.** Edit the front matter and body in Markdown. While
    `draft: true`, it is invisible to the world.
@@ -52,6 +50,18 @@ Install Hugo (`brew install hugo` on macOS). No Node, no Python — just Hugo.
    Pushing to `main` triggers the GitHub Action, which builds and deploys in
    about half a minute. **Pushing to `main` is publishing** — there is no
    separate deploy step.
+
+## Where posts end up
+
+Posts live in `content/technology/`, but they publish at the site root.
+`hugo.toml` maps the section with `[permalinks] technology = "/:slug/"`, so:
+
+```
+content/technology/my-note/index.md   →   https://packetsherpa.org/my-note/
+```
+
+The `/technology/` URL is the **Archive** page — the full list, newest first.
+The home page lists posts too, so most readers never hit the Archive directly.
 
 ## Text-only post vs. post with a header image
 
@@ -82,8 +92,23 @@ inline:
 ![Alt text describing the photo](photo.jpg)
 ```
 
-Working examples to copy: `content/technology/it-wasnt-air-gapped/` and
-`content/music/death-cab-for-cutie-merriweather-2026-07-21/`.
+Working example to copy: `content/technology/it-wasnt-air-gapped/`.
+
+### Image sizes
+
+Commit the full-resolution file. Both paths downscale and convert to WebP at
+build time:
+
+- **Header images** — PaperMod does it, because `cover.responsiveImages = true`
+  is set in `hugo.toml`. It only runs when `params.env` is `production`, which
+  is the committed setting, so `hugo server` skips it for speed.
+- **In-body images** — `layouts/_markup/render-image.html` handles it. It emits
+  a `srcset` at 480/720/1080px plus a 1440px cap, all WebP at q82, with
+  `loading="lazy"`. Formats Hugo cannot process (SVG, GIF) and remote URLs fall
+  through to a plain `<img>` untouched.
+
+Generated variants land in `resources/_gen/`, which is git-ignored — CI
+regenerates them on every build.
 
 ## Front matter reference
 
@@ -93,6 +118,8 @@ title: "Your Title"
 date: 2026-08-01
 draft: true            # flip to false to publish
 description: "One-sentence summary; shows on cards and link previews."
+categories:
+  - Technology
 tags:
   - security
   - ai
@@ -114,8 +141,11 @@ and makes a future theme swap a one-line change.
 - **Do not run `hugo --panicOnWarning`.** The current PaperMod release triggers
   two harmless Hugo deprecation warnings that would fail the build under that
   flag. Use `hugo server -D` and `hugo --gc --minify` (what CI runs).
-- The About page and section intros are Markdown too: `content/about.md`,
-  `content/technology/_index.md`, `content/music/_index.md`.
+- **Write straight quotes and apostrophes in Markdown source.** Hugo's Goldmark
+  typographer converts them to curly at build time. Hand-typing curly characters
+  produces identical output while making the source inconsistent.
+- The About page and the Archive intro are Markdown too: `content/about.md` and
+  `content/technology/_index.md`.
 
 ## Publishing from a phone or tablet
 
@@ -136,11 +166,6 @@ and push to `main` can publish. Ranked by how well each handles a real post
    path like `content/technology/my-note/index.md` in the filename to create the
    folder, then upload the image into the same folder. Fiddlier than Working
    Copy, but it works.
-
-3. **A browser CMS, if mobile becomes your main way to post.** A form-based
-   editor (e.g. Pages CMS or Decap CMS) gives a phone-friendly title/body/image
-   flow that commits for you. It adds back a little config that this rebuild
-   deliberately cut, but it is the smoothest phone experience.
 
 **Android:** same idea — a git client like Termux + git or MGit, plus any
 Markdown editor. The GitHub web flow is identical.

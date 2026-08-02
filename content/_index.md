@@ -1,4 +1,4 @@
 ---
 title: "Home"
-description: "Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
+description: "Damien DeVille on security, artificial intelligence, complex systems, and technical leadership."
 ---

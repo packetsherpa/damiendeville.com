@@ -6,13 +6,12 @@ Staging ground for writing that isn't a draft yet: half-thoughts, links worth re
 
 - `inbox/` — raw capture. Anything, unsorted, no structure required. Sweep it periodically into a section folder or `archive/`.
 - `technology/` — developing technology notes.
-- `music/` — developing listening notes and show notes.
 - `archive/` — ideas that went nowhere, or whose file was promoted to `content/`. Kept rather than deleted, because dead ideas resurface.
 
 ## Flow
 
 1. Capture into `inbox/` without thinking about where it belongs.
-2. When an idea has a shape, move it to `technology/` or `music/` and give it a real filename.
+2. When an idea has a shape, move it to `technology/` and give it a real filename.
 3. When it has a governing idea you can state in one sentence — the bar in `STYLE.md` — promote it: create the real post with `hugo new content technology/my-note.md`, move the thinking across, and drop the idea file in `archive/`.
 
 ## Shape of an idea file

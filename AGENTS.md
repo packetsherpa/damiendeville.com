@@ -1,20 +1,24 @@
-# Steady (steady.org) — Agent Instructions
+# Packet Sherpa (packetsherpa.org) — Agent Instructions
 
-Hugo source for Steady, Damien DeVille's writing on technology, life, and music.
+Hugo source for Packet Sherpa, Damien DeVille's technology writing.
 
 This file is the single source of truth for any agent working in this repo
 (Claude Code, Codex, or others). `CLAUDE.md` and `GEMINI.md` are symlinks to
 this file. Global conventions live in `~/.claude/CLAUDE.md` — do not restate
-them here. This file covers only what is specific to Steady (steady.org).
+them here. This file covers only what is specific to Packet Sherpa
+(packetsherpa.org).
 
 ## What This Tool Is
 
-This repository builds and deploys a Hugo site at `https://steady.org/`.
-It is a writing-first personal publication. The content areas are:
+This repository builds and deploys a Hugo site at `https://packetsherpa.org/`.
+It is a writing-first personal publication covering security, artificial
+intelligence, complex systems, and technical leadership. The content areas are:
 
-- `content/technology/` for technology notes
-- `content/music/` for listening notes and live-show notes
+- `content/technology/` for technology notes — the only post section
 - `content/about.md` for the about page
+
+Music and personal writing live in a separate repo and site, `steady.org`. Do
+not add music or show notes here.
 
 The site renders through the [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 theme, which is vendored as a git submodule under `themes/PaperMod`.
@@ -32,8 +36,7 @@ Workflow docs:
 ## Writing Style
 
 `STYLE.md` is the writing standard for all reader-facing site content. Read and
-apply it whenever creating or substantively editing technology notes, music
-writing, show notes, or personal posts.
+apply it whenever creating or substantively editing a technology note.
 
 @STYLE.md
 
@@ -41,6 +44,10 @@ writing, show notes, or personal posts.
 
 - A post is a draft (`draft: true`) until you set `draft: false`; publishing is
   pushing a non-draft post to `main`.
+- Posts live in `content/technology/` but publish at the site root:
+  `[permalinks]` maps the section to `/:slug/`, so a post in
+  `content/technology/my-note/` is served at `https://packetsherpa.org/my-note/`.
+  The section listing itself is the Archive page at `/technology/`.
 - For a post with a header image, make it a page bundle (a folder with
   `index.md`) and set `cover.image` in front matter. See
   `content/technology/it-wasnt-air-gapped/` for a working example.

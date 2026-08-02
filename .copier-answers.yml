@@ -1,7 +1,7 @@
 # Changes here will be overwritten by `copier update`. Managed by tool-template.
 _commit: local-retrofit
-project_name: steady.org
-project_description: Hugo source for Steady, Damien DeVille's writing on technology, life, and music.
+project_name: packetsherpa.org
+project_description: Hugo source for Packet Sherpa, Damien DeVille's technology writing.
 include_project_context: true
 include_agent_coordination: true
 is_python: false

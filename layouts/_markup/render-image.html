@@ -1,0 +1,39 @@
+{{- /*
+  Image render hook: turns `![alt](photo.jpg)` in a page bundle into a
+  responsive, WebP-encoded <img> with a srcset, instead of shipping the
+  original camera-resolution file.
+
+  Images that are not page resources (remote URLs, site-wide files under
+  static/) and formats Hugo cannot process (SVG, GIF) fall through to a plain
+  <img> unchanged.
+*/ -}}
+{{- $alt := .PlainText -}}
+{{- $title := .Title -}}
+{{- $src := .Destination -}}
+{{- $maxWidth := 1440 -}}
+{{- $widths := slice 480 720 1080 -}}
+{{- $res := .Page.Resources.GetMatch $src -}}
+
+{{- if and $res (in (slice "jpeg" "png" "webp") $res.MediaType.SubType) -}}
+  {{- $target := cond (gt $res.Width $maxWidth) $maxWidth $res.Width -}}
+  {{- $full := $res.Resize (printf "%dx webp q82" $target) -}}
+  {{- $srcset := slice -}}
+  {{- range $widths -}}
+    {{- if lt . $target -}}
+      {{- $small := $res.Resize (printf "%dx webp q82" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $small.RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $full.RelPermalink $full.Width) -}}
+  <img src="{{ $full.RelPermalink }}"
+       srcset="{{ delimit $srcset ", " }}"
+       sizes="(max-width: 720px) 100vw, 720px"
+       width="{{ $full.Width }}"
+       height="{{ $full.Height }}"
+       alt="{{ $alt }}"
+       {{- with $title }} title="{{ . }}"{{ end }}
+       loading="lazy"
+       decoding="async">
+{{- else -}}
+  <img src="{{ $src | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

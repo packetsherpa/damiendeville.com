@@ -1,6 +1,6 @@
-baseURL = "https://steady.org/"
+baseURL = "https://packetsherpa.org/"
 locale = "en-US"
-title = "steady dot org"
+title = "Packet Sherpa"
 timeZone = "America/New_York"
 enableRobotsTXT = true
 summaryLength = 36
@@ -9,22 +9,22 @@ theme = "PaperMod"
 [params]
   env = "production"
   author = "Damien DeVille"
-  description ="Independent writing by Damien DeVille on security, artificial intelligence, technical leadership, listening, and live music."
+  description = "Damien DeVille on security, artificial intelligence, complex systems, and technical leadership."
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  mainSections = ["technology", "music"]
+  mainSections = ["technology"]
   images = ["images/og-default.jpg"]
 
   [params.cover]
     linkFullImages = true
-    responsiveImages = false
+    responsiveImages = true
 
   [params.homeInfoParams]
     Title = "Damien DeVille"
-    Content = "Notes on technology, life, and music. I've spent 25+ years in networking and cybersecurity — hands-on engineering, systems architecture, and technical leadership — and I write here about security, artificial intelligence, complex systems, and the records and live shows I keep coming back to."
+    Content = "Notes on security, artificial intelligence, complex systems, and technical leadership. I've spent 25+ years in networking and cybersecurity — hands-on engineering, systems architecture, and technical leadership — and I write here about how these systems fail and what actually holds them together."
 
   [[params.socialIcons]]
     name = "linkedin"
@@ -40,7 +40,7 @@ theme = "PaperMod"
     url = "index.xml"
 
 [permalinks]
-  technology = "/technology/:slug/"
+  technology = "/:slug/"
 
 [taxonomies]
   category = "categories"
@@ -68,13 +68,13 @@ theme = "PaperMod"
     dir = ":cacheDir/images"
 
 [[menus.main]]
-  name = "Technology"
+  name = "Archive"
   pageRef = "/technology"
   weight = 10
 
 [[menus.main]]
   name = "Music"
-  pageRef = "/music"
+  url = "https://steady.org/"
   weight = 20
 
 [[menus.main]]

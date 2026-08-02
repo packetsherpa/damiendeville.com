@@ -18,7 +18,7 @@ inconsistent with every other file.
 Check the rendered result rather than the source when verifying typography:
 
 ```sh
-grep -o 'wasn[^ ]*t' public/technology/<slug>/index.html
+grep -o 'wasn[^ ]*t' public/<slug>/index.html
 ```
 
 See [[site-renders-via-papermod-submodule]] for the rest of the build path.

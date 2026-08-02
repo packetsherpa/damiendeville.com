@@ -1,6 +1,8 @@
 # Style & Voice
 
-This site is a personal publication about technology, life, and music. It should read like Damien DeVille: an experienced technologist and curious listener thinking in public, not a consultancy report, a press release, or generic AI prose.
+This site is a personal publication about security, artificial intelligence, complex systems, and technical leadership. It should read like Damien DeVille: an experienced technologist thinking in public, not a consultancy report, a press release, or generic AI prose.
+
+Music and personal writing live at steady.org and follow that repo's `STYLE.md`. This file covers technology writing only.
 
 ## Core voice
 
@@ -13,8 +15,6 @@ This site is a personal publication about technology, life, and music. It should
 
 ## What the writing should do
 
-### Technology notes
-
 - Start with the actual claim or question. Do not spend several paragraphs announcing that a topic is important.
 - Anchor claims in primary sources, direct experience, or clearly identified reporting. Link close to the claim it supports.
 - Separate model capability from system design, product marketing from evidence, and a possible risk from a demonstrated one.
@@ -22,25 +22,12 @@ This site is a personal publication about technology, life, and music. It should
 - Critique ideas and systems fairly. Do not write a takedown when the evidence supports a narrower claim.
 - Prefer “this is a familiar failure mode” to “this changes everything.”
 
-### Music and show notes
-
-- Lead with what was heard, felt, or noticed. Specific songs, arrangements, room details, weather, and sequencing beat generic praise.
-- Let enthusiasm be plain. “They were incredibly tight” is better than inflated superlatives.
-- Use personal memory when it illuminates the music or the night, not as a detour from it.
-- Preserve the factual record: artist names, venues, dates, support acts, and setlists must be checked.
-
-### Life and personal posts
-
-- Be honest without turning private life into content by default.
-- Favor a real scene, memory, or question over a universal lesson.
-- Do not force a tidy moral. A resonant observation is enough.
-
 ## Structure
 
 - Give every post one governing idea. A reader should be able to state it in one sentence.
 - Open with a strong claim, a concrete observation, or a scene. Avoid throat-clearing.
 - Use headings when they help a reader follow an argument; use sentence case.
-- Use prose for reasoning and narrative. Use lists for genuinely parallel items, checks, track lists, or practical steps.
+- Use prose for reasoning and narrative. Use lists for genuinely parallel items, checks, or practical steps.
 - End on the sharpest version of the argument, not a generic summary or “future outlook.”
 - Keep posts as long as the idea needs. Do not add sections merely to make a post feel substantial.
 

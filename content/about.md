@@ -1,15 +1,15 @@
 ---
 title: "About"
-description: "Damien DeVille writes about security, artificial intelligence, technical leadership, and music."
+description: "Damien DeVille writes about security, artificial intelligence, complex systems, and technical leadership."
 ---
 
-I’m Damien DeVille. For more than 25 years, I’ve worked across networking and cybersecurity, helping organizations understand complex systems, make sound architectural choices, and turn technology into outcomes that hold up in the real world.
+I'm Damien DeVille. For more than 25 years I've worked across networking and cybersecurity, helping organizations understand complex systems, make sound architectural choices, and turn technology into outcomes that hold up in the real world.
 
-Today I work for the largest cyber security company in the world. My career has included hands-on engineering, systems architecture, SASE, cloud, and technical leadership. Across those roles, the recurring work has been translating complexity: listening carefully, finding the real problem, and making a path forward clear.
+Today I work for the largest cybersecurity company in the world. My career has included hands-on engineering, systems architecture, SASE, cloud, and technical leadership. Across those roles the recurring work has been translating complexity: listening carefully, finding the real problem, and making a path forward clear.
 
-This site is where I follow ideas beyond the boundaries of a particular project or employer. My technology notes cover security, artificial intelligence, complex systems, and leadership—grounded in experience, but curious about what comes next. They are a practical record of what I’m learning and what seems worth keeping.
+This site is where I follow ideas beyond the boundaries of a particular project or employer. The notes here cover security, artificial intelligence, complex systems, and leadership, grounded in experience but curious about what comes next. They are a practical record of what I'm learning and what seems worth keeping.
 
-Music is the other thread running through the site. I write about the records I keep returning to and the live shows I attend.
+I write about music separately, at [steady.org](https://steady.org/).
 
 For a more complete professional history, [find me on LinkedIn](https://www.linkedin.com/in/ddeville/).
 

@@ -23,7 +23,7 @@ theme = "PaperMod"
     responsiveImages = true
 
   [params.homeInfoParams]
-    Title = "Damien DeVille"
+    Title = "Default Deny, by Damien DeVille"
     Content = "Notes on security, artificial intelligence, complex systems, and technical leadership. I've spent 25+ years in networking and cybersecurity — hands-on engineering, systems architecture, and technical leadership — and I write here about how these systems fail and what actually holds them together."
 
   [[params.socialIcons]]

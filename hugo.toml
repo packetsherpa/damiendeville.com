@@ -1,6 +1,6 @@
 baseURL = "https://packetsherpa.org/"
 locale = "en-US"
-title = "PacketShepa"
+title = "PacketSherpa"
 timeZone = "America/New_York"
 enableRobotsTXT = true
 summaryLength = 36

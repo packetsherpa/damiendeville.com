@@ -1,18 +1,32 @@
-name: Build and deploy Hugo site to Pages
+name: Sync from upstream and deploy to Pages
+
+# This repo is a mirror. All content comes from packetsherpa.org; the only path
+# native to this repo is .github/. The sync, build, and deploy all run in one
+# workflow on purpose: a push made with GITHUB_TOKEN does not trigger further
+# workflow runs, so a separate build workflow listening on `push` would never
+# fire after the sync commit.
 
 on:
+  schedule:
+    # Hourly. Upstream pushes are picked up within the hour; run the workflow
+    # manually to pull a change through immediately.
+    - cron: "23 * * * *"
+  workflow_dispatch:
   push:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
+
+env:
+  UPSTREAM_REPO: packetsherpa/packetsherpa.org
+  SITE_DOMAIN: damiendeville.com
 
 jobs:
   build:
@@ -25,6 +39,38 @@ jobs:
         with:
           fetch-depth: 0
           submodules: recursive
+          persist-credentials: true
+
+      - name: Sync content from upstream
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream "https://github.com/${UPSTREAM_REPO}.git"
+          git fetch --quiet upstream main
+          upstream_sha="$(git rev-parse --short upstream/main)"
+
+          # Replace the working tree wholesale with upstream's, then drop
+          # whatever .github/ upstream carries and restore this repo's own.
+          # Dropping rather than overwriting matters: if upstream ever adds a
+          # workflow file this repo does not have, it would otherwise leak in,
+          # and GITHUB_TOKEN is not permitted to push new workflow files.
+          git read-tree --reset -u upstream/main
+          git rm -r -q --cached --ignore-unmatch .github
+          rm -rf .github
+          git checkout HEAD -- .github
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Already in sync with ${UPSTREAM_REPO}@${upstream_sha}."
+          else
+            git commit -q -m "Sync content from ${UPSTREAM_REPO}@${upstream_sha}"
+            git push -q origin HEAD:main
+            echo "Synced to ${UPSTREAM_REPO}@${upstream_sha}."
+          fi
+
+          # The theme submodule pointer may have moved with the sync.
+          git submodule update --init --recursive
 
       - name: Configure Pages
         id: pages
@@ -37,16 +83,26 @@ jobs:
           tar -xf "${RUNNER_TEMP}/hugo.tar.gz" -C "${RUNNER_TEMP}" hugo
           echo "${RUNNER_TEMP}" >> "${GITHUB_PATH}"
 
-      # baseURL deliberately comes from hugo.toml, not from
-      # steps.pages.outputs.base_url. That output reflects the repo's current
-      # Pages settings, so while a custom domain's certificate is still
-      # provisioning it reports http:// — which bakes http:// canonical, og:url,
-      # and RSS links into the deployed HTML.
+      - name: Point the built site at this domain
+        run: |
+          set -euo pipefail
+          # Upstream's static/CNAME says packetsherpa.org. Shipping that in this
+          # artifact would make Pages reassign this repo's custom domain to a
+          # domain another repo already owns.
+          echo "${SITE_DOMAIN}" > static/CNAME
+
+      # baseURL is passed explicitly rather than taken from
+      # steps.pages.outputs.base_url, which reports http:// while a custom
+      # domain certificate is still provisioning and would bake http:// into
+      # canonical, og:url, and RSS links. This overrides baseURL only:
+      # rel=canonical is driven by params.canonicalBaseURL in the shared
+      # hugo.toml, so both sites agree on which domain is canonical.
       - name: Build site
         run: >-
           hugo
           --gc
           --minify
+          --baseURL "https://${SITE_DOMAIN}/"
           --cacheDir "${{ runner.temp }}/hugo_cache"
 
       - name: Upload Pages artifact

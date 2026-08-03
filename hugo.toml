@@ -11,6 +11,13 @@ theme = "PaperMod"
   author = "Damien DeVille"
   description = "Damien DeVille on security, artificial intelligence, complex systems, and technical leadership."
   defaultTheme = "auto"
+  # Both packetsherpa.org and the damiendeville.com mirror build from this
+  # config, so this one value decides which domain search engines treat as the
+  # original. packetsherpa.org is being blocked by some DNS filters for being a
+  # newly registered domain, so damiendeville.com is canonical for now. To flip
+  # back once packetsherpa.org ages out (target: mid-September 2026), set this
+  # to "https://packetsherpa.org/" — nothing else needs to change.
+  canonicalBaseURL = "https://damiendeville.com/"
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
